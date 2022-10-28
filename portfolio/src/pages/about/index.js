@@ -7,7 +7,7 @@ import "./about.css";
 export default function About(){
     return (
         <div>
-            <p>Hello World</p>
+            <p>Hello World of About</p>
         </div>
     )
     }

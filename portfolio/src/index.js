@@ -9,7 +9,6 @@ import Err from "./pages/error"
 import {
   createBrowserRouter,
   RouterProvider,
-  Route,
 } from "react-router-dom";
 
 

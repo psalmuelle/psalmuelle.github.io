@@ -1,14 +1,18 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@200;400;500;700&display=swap');
 
 :root{
-    --primary-color :#4A4A3B ;
-    --secondary-color:#8380B6 ;
-    --tetiary-color:#DFDFDF;
+    --primary-color :#282C33 ;
+    --secondary-color:#ee1ad2 ;
+    --tetiary-color:#E8DB7D;
 }
 *{
     box-sizing: border-box;
     padding: 0;
     margin: 0;
+}
+html{
+    scroll-behavior: smooth;
+    
 }
 body{
     font-family: 'Inter', sans-serif;

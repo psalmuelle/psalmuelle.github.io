@@ -7,6 +7,7 @@ import LinkedinLogo from "../assets/Linkedin.svg";
 import EmailLogo from "../assets/Email.svg";
 import { NavLink } from "react-router-dom";
 import styled from "styled-components";
+import {motion} from "framer-motion"
 
 const Wrapper = styled.header`
   display: flex;
@@ -162,6 +163,7 @@ const Header = () => {
       <LinkWrapper>
         <li>
           <NavLink
+            end  
             className={({ isActive }) =>
               "nav-link" + (!isActive ? " unselected" : "")
             }

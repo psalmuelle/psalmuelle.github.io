@@ -215,6 +215,7 @@ const Header = () => {
         <MobileMenuContainer>
           <li>
             <NavLink
+              end
               className={({ isActive }) =>
                 "nav-link" + (!isActive ? " unselected" : "")
               }

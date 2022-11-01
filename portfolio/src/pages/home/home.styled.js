@@ -81,7 +81,7 @@ text-align: center;
 padding: 9px 18px;
 font-weight: 500;
 color: white;
-
+z-index: -122;
 p{
     position: absolute;
     border: 1px solid gray;
@@ -98,7 +98,45 @@ p{
 `
 
 const ProjectSection = styled.section`
+margin: 0 auto;
+margin-top:100px ;
+margin-bottom: 500px;
+max-width: 85%;
 
+div{
+display: flex;
+justify-content: space-between;
+align-items: center;
+color: white;
+h2{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    font-weight: 500;
+    font-size: 28px;
+
+    span{
+        color: var(--secondary-color);
+        padding-right: 6px;
+    }
+    div{
+        width: 35vw;
+        height: 1px;
+        margin-left: 24px;
+        background-color: var(--secondary-color);
+    }
+    @media (max-width: 900px) {
+    font-size: 18px;
+    div{
+        width: 0;
+    }
+  }
+}
+p{
+  cursor: pointer;
+}
+}
 `
 
 

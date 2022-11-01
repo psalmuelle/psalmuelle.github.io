@@ -5,7 +5,7 @@ import OpenBar from "../assets/open-bar.svg";
 import GithubLogo from "../assets/Github.svg";
 import LinkedinLogo from "../assets/Linkedin.svg";
 import EmailLogo from "../assets/Email.svg";
-import { NavLink } from "react-router-dom";
+import { NavLink, useNavigate } from "react-router-dom";
 import styled from "styled-components";
 import {motion} from "framer-motion"
 
@@ -17,6 +17,10 @@ const Wrapper = styled.header`
   max-width: 85%;
   text-align: center;
   margin: 0 auto;
+ border-radius: 0 0 4px 4px;
+  position: sticky;
+  top: 0;
+  backdrop-filter: blur(10px);
 `;
 const ImageWrapper = styled.figure`
   display: flex;
@@ -69,7 +73,7 @@ align-items: center;
 gap: 8px;
 position: absolute;
 top: 0;
-left: 3.25%;
+left: -5.5%;
 div{
 height: 8rem;
 width: 0;
@@ -106,11 +110,12 @@ const MobileMenuContainer = styled.ul`
   width: 100%;
   padding: 0 7.5%;
   padding-top: 52px;
-  height: calc(100% - 63px);
-  top: 10.5%;
+  height: calc(100vh - 63px);
+  top: 100%;
   right: 0;
   list-style-type: none;
-
+  z-index: 1222;
+  
   .social-links {
     display: flex;
     justify-content: center;
@@ -141,6 +146,7 @@ const MobileMenuContainer = styled.ul`
 
 const Header = () => {
   const [open, setOpen] = useState(false);
+  const navigate = useNavigate()
 
   return (
     <Wrapper>
@@ -156,7 +162,7 @@ const Header = () => {
           <img src={EmailLogo} alt='social-handle' />
         </a>
       </SocialDeskTop>
-      <ImageWrapper>
+      <ImageWrapper onClick={()=> navigate("/")}>
         <img src={LogoImg} alt='logo' className='logo' />
         <p className='name'>Sam</p>
       </ImageWrapper>

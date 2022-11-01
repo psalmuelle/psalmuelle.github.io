@@ -28,7 +28,11 @@ return (
             <p>- Laurice Leitao</p>
         </MantraSection>
         <ProjectSection>
-            This is the project i Am talking about. i know this is not the rhing i ean t to do but dont worru i wiill come t te reso  asf as fa sfa sfj   aisfsf afsjk anas fkas fn fn  f a ka fnf na fsn fnk f k fd f nkd fnk
+           <div>
+            <h2><span>#</span>projects <div></div></h2>
+            <p onClick={()=> navigate("/projects")}>View all ~~~&gt; </p>
+           </div>
+
         </ProjectSection>
     </div>
 )

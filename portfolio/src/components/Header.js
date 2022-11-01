@@ -80,7 +80,7 @@ a img{
   width: 32px;
   height: 32px;
 }
-@media (max-width: 640px) {
+@media (max-width: 900px) {
     display: none;
   }
 `;

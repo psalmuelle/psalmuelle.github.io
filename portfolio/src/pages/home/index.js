@@ -1,6 +1,6 @@
 import React from "react";
 import Header from "../../components/Header";
-import { HomeContainer, Section, MantraSection, ProjectSection } from "./home.styled";
+import { HomeContainer, Section, MantraSection, ProjectSection } from "./Home.styled";
 import IllustrationImg from "../../assets/3d-me.svg"
 import { useNavigate } from "react-router-dom";
 

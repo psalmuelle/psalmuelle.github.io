@@ -20,7 +20,7 @@ const Wrapper = styled.header`
  border-radius: 0 0 4px 4px;
   position: sticky;
   top: 0;
-  backdrop-filter: blur(10px);
+  backdrop-filter: blur(16px);
 `;
 const ImageWrapper = styled.figure`
   display: flex;

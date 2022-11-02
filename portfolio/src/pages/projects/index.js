@@ -1,6 +1,7 @@
 import React from "react";
-import { Heading } from "./Projects.styled";
+import { Heading, Wrapper, Container } from "./Projects.styled";
 import Header from "../../components/Header";
+import ProjExample from "../../assets/proj-example.png"
 
 
 
@@ -14,9 +15,18 @@ export default function Projects(){
             <p>List of my projects</p>
             </Heading>
 
-            <section>
-
-            </section>
+            <Wrapper>
+            <Container>
+                <img src={ProjExample} alt="example" />
+                <p>Html, CSS and Javascript</p>
+                <h2>Example</h2>
+                <p>Minecraft Server Hosting</p>
+                <div>
+                    <button>Github</button>
+                    <button>Live Site</button>
+                </div>
+            </Container>
+            </Wrapper>
         </div>
     )
     }

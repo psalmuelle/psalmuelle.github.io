@@ -1,5 +1,6 @@
 import React from "react";
 import Header from "../../components/Header";
+import Footer from "../../components/Footer";
 import { HomeContainer, Section, MantraSection, ProjectSection } from "./Home.styled";
 import IllustrationImg from "../../assets/3d-me.svg"
 import { useNavigate } from "react-router-dom";
@@ -34,6 +35,7 @@ return (
            </div>
 
         </ProjectSection>
+        <Footer/>
     </div>
 )
 }

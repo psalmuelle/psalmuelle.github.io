@@ -1,6 +1,7 @@
 import React from "react";
 import { Heading, Wrapper, Container } from "./Projects.styled";
 import Header from "../../components/Header";
+import Footer from "../../components/Footer";
 import ProjExample from "../../assets/proj-example.png"
 
 
@@ -18,15 +19,19 @@ export default function Projects(){
             <Wrapper>
             <Container>
                 <img src={ProjExample} alt="example" />
-                <p>Html, CSS and Javascript</p>
+                <p className="stack">Html, CSS and Javascript</p>
+
+                <div className="info">
                 <h2>Example</h2>
                 <p>Minecraft Server Hosting</p>
                 <div>
-                    <button>Github</button>
-                    <button>Live Site</button>
+                    <button>Github &lt;~&gt;</button>
+                    <button>Live Site &ge;</button>
+                </div>
                 </div>
             </Container>
             </Wrapper>
+            <Footer/>
         </div>
     )
     }

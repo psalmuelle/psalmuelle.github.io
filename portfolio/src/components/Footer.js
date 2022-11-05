@@ -55,6 +55,7 @@ const LogoWrapper = styled.section`
   gap: 4px;
   color: white;
   cursor: pointer;
+  z-index: -122222;
   .logo {
     display: block;
     width: 24px;

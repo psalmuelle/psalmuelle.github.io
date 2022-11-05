@@ -147,7 +147,7 @@ const projects = [
 { 
     id: "17",
     img_src: "slick-webapp.png",
-    stack : "Django, Reactjs",
+    stack : "Django(Python), Reactjs",
     title : "Slick Web App",
     description : "A Todo Management webapp",
     github_link : "https://github.com/psalmuelle/getitdone",

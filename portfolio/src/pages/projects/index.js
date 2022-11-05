@@ -2,36 +2,58 @@ import React from "react";
 import { Heading, Wrapper, Container } from "./Projects.styled";
 import Header from "../../components/Header";
 import Footer from "../../components/Footer";
-import ProjExample from "../../assets/proj-example.png"
+import projects from "../../projects";
+
+const reversedItems = projects.map((item) => item).reverse();
+
+function importAll(r) {
+  const images = {};
+  r.keys().forEach((item, index) => {
+    images[item.replace("./", "")] = r(item);
+  });
+  return images;
+}
+const images = importAll(
+  require.context("../../assets", false, /\.(png|jpe?g|svg)$/)
+);
 
 
 
-export default function Projects(){
-    return (
-        <div>
-            <Header/>
 
-            <Heading>
-            <h1><span>/</span>projects</h1>
-            <p>List of my projects</p>
-            </Heading>
+export default function Projects() {
 
-            <Wrapper>
-            <Container>
-                <img src={ProjExample} alt="example" />
-                <p className="stack">Html, CSS and Javascript</p>
 
-                <div className="info">
-                <h2>Example</h2>
-                <p>Minecraft Server Hosting</p>
+  return (
+    <div>
+      <Header />
+
+      <Heading>
+        <h1>
+          <span>/</span>projects
+        </h1>
+        <p>List of my projects</p>
+      </Heading>
+
+      <Wrapper>
+        {reversedItems.map((val, i) => {
+          return (
+            <Container key={val.id}>
+              <img src={images[val.img_src]} alt={val.title} />
+              <p className='stack'>{val.stack}</p>
+
+              <div className='info'>
+                <h2>{val.title}</h2>
+                <p>{val.description}</p>
                 <div>
-                    <button>Github &lt;~&gt;</button>
-                    <button>Live Site &ge;</button>
+                  <button onClick={()=>window.open(val.github_link, '_blank', 'noopener,noreferrer')}>Github &lt;~&gt;</button>
+                  <button onClick={()=>window.open(val.live_url, '_blank', 'noopener,noreferrer')}>Live Site &ge;</button>
                 </div>
-                </div>
+              </div>
             </Container>
-            </Wrapper>
-            <Footer/>
-        </div>
-    )
-    }
+          );
+        })}
+      </Wrapper>
+      <Footer />
+    </div>
+  );
+}

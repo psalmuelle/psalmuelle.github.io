@@ -34,7 +34,7 @@ const Wrapper = styled.ul`
 const Container = styled.li`
   max-width: 330px;
   height: fit-content;
-  border: 1px solid gray;
+  border: 1px solid #ABB2BF;
   border-radius: 3px;
   img {
     display: block;
@@ -44,10 +44,10 @@ const Container = styled.li`
     cursor: pointer;
   }
   .stack {
-    color: gray;
+    color: #ABB2BF;
     padding: 8px;
-    border-top: 1px solid gray;
-    border-bottom: 1px solid gray;
+    border-top: 1px solid #ABB2BF;
+    border-bottom: 1px solid #ABB2BF;
   }
   .info {
     padding: 16px;
@@ -57,7 +57,7 @@ const Container = styled.li`
       font-size: 24px;
     }
     p {
-      color: gray;
+      color: #ABB2BF;
       padding-top: 4px;
       padding-bottom: 16px;
     }

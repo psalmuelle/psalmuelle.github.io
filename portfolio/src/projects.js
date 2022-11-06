@@ -165,4 +165,37 @@ const projects = [
 ]
 
 
-export default projects
+const sampleProjects = [
+    { 
+        id: "1",
+        img_src: "slick-webapp.png",
+        stack : "Django(Python), Reactjs",
+        title : "Slick.io Task Management Appp",
+        description : "A Todo Management webapp",
+        github_link : "https://github.com/psalmuelle/getitdone",
+        live_url: "https://slickio.onrender.com/"
+    },
+    { 
+        id: "2",
+        img_src: "qr-swift.png",
+        stack : "Django, HTML, CSS, JS",
+        title : "QR Generating Platform",
+        description : "A qr-gen web app",
+        github_link : "https://github.com/zuri-training/Team-56_QR-GEN-Frontend",
+        live_url: "https://team-56.netlify.app/"
+    },
+    { 
+        id: "3",
+        img_src: "snap.png",
+        stack : "ReactJs",
+        title : "Snap Landing Page (Frontend Mentor)",
+        description : "A landing page",
+        github_link : "https://github.com/psalmuelle/snap",
+        live_url: "https://snap-highfly.netlify.app/"
+    },
+]
+
+export {
+    projects,
+    sampleProjects
+};

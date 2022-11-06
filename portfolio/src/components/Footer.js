@@ -6,7 +6,7 @@ const Wrapper = styled.footer`
   width: 100%;
   color: white;
   margin-top: 72px;
-  border-top: 1px solid gray;
+  border-top: 1px solid #ABB2BF;
 `;
 const Content = styled.div`
   max-width: 85%;
@@ -16,7 +16,7 @@ const Content = styled.div`
   justify-content: space-between;
   align-items: center;
   .copyright {
-    color: gray;
+    color: #ABB2BF;
     text-align: center;
     margin-top: 32px;
   }
@@ -66,7 +66,7 @@ const LogoWrapper = styled.section`
   }
   a {
     text-decoration: none;
-    color: gray;
+    color: #ABB2BF;
     display: block;
     margin-left: 16px;
   }

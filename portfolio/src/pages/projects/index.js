@@ -2,7 +2,7 @@ import React from "react";
 import { Heading, Wrapper, Container } from "./Projects.styled";
 import Header from "../../components/Header";
 import Footer from "../../components/Footer";
-import projects from "../../projects";
+import {projects} from "../../projects";
 
 const reversedItems = projects.map((item) => item).reverse();
 

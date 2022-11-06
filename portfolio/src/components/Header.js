@@ -54,7 +54,7 @@ const LinkWrapper = styled.ul`
     text-decoration: none;
   }
   .unselected {
-    color: gray;
+    color: #ABB2BF;
   }
   span {
     color: var(--secondary-color);
@@ -134,7 +134,7 @@ const MobileMenuContainer = styled.ul`
     font-size: 28px;
   }
   .unselected {
-    color: gray;
+    color: #ABB2BF;
   }
   span {
     color: var(--secondary-color);

@@ -242,9 +242,18 @@ p{
 `
 const SkillContent= styled.div`
 margin-top: 48px;
+width: 100%;
 display: flex;
 justify-content: space-between;
 color: white;
+.img__container{
+  width: 100%;
+
+  img{
+    width: 100%;
+    display: block;
+  }
+}
 .my-skills{
 display: flex;
 justify-content: center;
@@ -325,8 +334,57 @@ p{
 `
 
 const AboutContent = styled.div`
+display: flex;
+flex-wrap: wrap;
+`
+
+//Contact me page
+
+
+const ContactMeSection = styled.section`
+margin: 0 auto;
+margin-top:100px ;
+max-width: 85%;
+.contact__nav{
+display: flex;
+justify-content: space-between;
+align-items: center;
+color: white;
+h2{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: 500;
+    font-size: 28px;
+
+    span{
+        color: var(--secondary-color);
+        padding-right: 6px;
+    }
+    .line{
+        width: 5vw;
+        height: 1px;
+        margin-left: 24px;
+        background-color: var(--secondary-color);
+    }
+    @media (max-width: 900px) {
+    font-size: 18px;
+    .line{
+        width: 0;
+    }
+  }
+}
+p{
+  cursor: pointer;
+}
+}
+`
+
+const ContactMeContent = styled.div`
 
 `
 
-export {HomeContainer, Section, MantraSection, ProjectSection, ProjectList, SkillSection, SkillContent, AboutSection, AboutContent}
+
+
+export {HomeContainer, Section, MantraSection, ProjectSection, ProjectList, SkillSection, SkillContent, AboutSection, AboutContent, ContactMeContent, ContactMeSection}
 

@@ -132,7 +132,7 @@ const MobileMenuContainer = styled.ul`
   .nav-link {
     color: white;
     text-decoration: none;
-    font-size: 28px;
+    font-size: 24px;
   }
   .unselected {
     color: #ABB2BF;

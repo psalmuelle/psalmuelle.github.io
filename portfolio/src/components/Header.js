@@ -17,10 +17,11 @@ const Wrapper = styled.header`
   max-width: 85%;
   text-align: center;
   margin: 0 auto;
+  background-color: var(--primary-color);
  border-radius: 0 0 4px 4px;
   position: sticky;
+  z-index: 99999;
   top: 0;
-  backdrop-filter: blur(16px);
 `;
 const ImageWrapper = styled.figure`
   display: flex;

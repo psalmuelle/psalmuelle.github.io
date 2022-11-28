@@ -2,7 +2,7 @@
 const projects = [
 { 
     id: "1",
-    img_src: "QR code component.png",
+    img_src: "QR code component-min.png",
     stack : "HTML, CSS",
     title : "QR Code Component",
     description : "QR code card component",
@@ -11,7 +11,7 @@ const projects = [
 },
 { 
     id: "2",
-    img_src: "NFT preview card component.png",
+    img_src: "NFT preview card component-min.png",
     stack : "HTML, CSS",
     title : "NFT Preview Card",
     description : "NFT card component",
@@ -20,7 +20,7 @@ const projects = [
 },
 { 
     id: "3",
-    img_src: "Interactive rating component.png",
+    img_src: "Interactive rating component-min.png",
     stack : "HTML, CSS, JS",
     title : "Interactive Rating Component",
     description : "A rating component",
@@ -29,7 +29,7 @@ const projects = [
 },
 { 
     id: "4",
-    img_src: "Order summary card.png",
+    img_src: "Order summary card-min.png",
     stack : "HTML, CSS",
     title : "Order Summary Card",
     description : "An order summary card component",
@@ -38,7 +38,7 @@ const projects = [
 },
 { 
     id: "5",
-    img_src: "Stats preview card component.png",
+    img_src: "Stats preview card component-min.png",
     stack : "HTML, CSS",
     title : "Stats Preview Card",
     description : "A preview card component",
@@ -47,7 +47,7 @@ const projects = [
 },
 { 
     id: "6",
-    img_src: "preview card component.png",
+    img_src: "preview card component-min.png",
     stack : "HTML, CSS",
     title : "3-Column Preview Card",
     description : "A card component",
@@ -56,7 +56,7 @@ const projects = [
 },
 { 
     id: "7",
-    img_src: "Profile card component.png",
+    img_src: "Profile card component-min.png",
     stack : "HTML, CSS",
     title : "Profile Card Component",
     description : "A simple profile card component",
@@ -65,7 +65,7 @@ const projects = [
 },
 { 
     id: "8",
-    img_src: "Base Apparel coming soon page.png",
+    img_src: "Base Apparel coming soon page-min.png",
     stack : "HTML, CSS, JS",
     title : "Coming Soon Page",
     description : "A simple coming soon page",
@@ -74,7 +74,7 @@ const projects = [
 },
 { 
     id: "9",
-    img_src: "social-proof.png",
+    img_src: "social-proof-min.png",
     stack : "HTML, CSS",
     title : "Social Profile Section",
     description : "A grid component",
@@ -83,7 +83,7 @@ const projects = [
 },
 { 
     id: "10",
-    img_src: "Four card feature section.png",
+    img_src: "Four card feature section-min.png",
     stack : "HTML, CSS",
     title : "Four Card Feature Section",
     description : "A feature section",
@@ -92,7 +92,7 @@ const projects = [
 },
 { 
     id: "11",
-    img_src: "Article preview component.png",
+    img_src: "Article preview component-min.png",
     stack : "HTML, CSS, JS",
     title : "Article Preview Component",
     description : "An article preview component",
@@ -101,7 +101,7 @@ const projects = [
 },
 { 
     id: "12",
-    img_src: "Ping coming soon page.png",
+    img_src: "Ping coming soon page-min.png",
     stack : "HTML, CSS",
     title : "Ping Page",
     description : "A simple coming soon page",
@@ -110,7 +110,7 @@ const projects = [
 },
 { 
     id: "13",
-    img_src: "Single Price.png",
+    img_src: "Single Price-min.png",
     stack : "HTML, CSS",
     title : "Single Price Card",
     description : "A simple grid component",
@@ -119,7 +119,7 @@ const projects = [
 },
 { 
     id: "14",
-    img_src: "FAQ Accordion Card.png",
+    img_src: "FAQ Accordion Card-min.png",
     stack : "HTML, CSS, JS",
     title : "FAQ Accordion Card",
     description : "An accordion card",
@@ -128,7 +128,7 @@ const projects = [
 },
 { 
     id: "15",
-    img_src: "snap.png",
+    img_src: "snap-min.png",
     stack : "ReactJs",
     title : "Snap Landing Page",
     description : "A landing page",
@@ -137,7 +137,7 @@ const projects = [
 },
 { 
     id: "16",
-    img_src: "qr-swift.png",
+    img_src: "qr-swift-min.png",
     stack : "Django, HTML, CSS, JS",
     title : "QR Generating Platform",
     description : "A qr-gen web app",
@@ -146,7 +146,7 @@ const projects = [
 },
 { 
     id: "17",
-    img_src: "slick-webapp.png",
+    img_src: "slick-webapp-min.png",
     stack : "Django(Python), Reactjs",
     title : "Slick Web App",
     description : "A Todo Management webapp",
@@ -155,7 +155,7 @@ const projects = [
 },
 { 
     id: "18",
-    img_src: "portfolio-site.png",
+    img_src: "portfolio-site-min.png",
     stack : "ReactJs, (Styled Component)",
     title : "My Portfolio",
     description : "My portfolio website",
@@ -168,7 +168,7 @@ const projects = [
 const sampleProjects = [
     { 
         id: "1",
-        img_src: "slick-webapp.png",
+        img_src: "slick-webapp-min.png",
         stack : "Django(Python), Reactjs",
         title : "Slick.io Task Management Appp",
         description : "A Todo Management webapp",
@@ -177,7 +177,7 @@ const sampleProjects = [
     },
     { 
         id: "2",
-        img_src: "qr-swift.png",
+        img_src: "qr-swift-min.png",
         stack : "Django, HTML, CSS, JS",
         title : "QR Generating Platform",
         description : "A qr-gen web app",
@@ -186,7 +186,7 @@ const sampleProjects = [
     },
     { 
         id: "3",
-        img_src: "snap.png",
+        img_src: "snap-min.png",
         stack : "ReactJs",
         title : "Snap Landing Page (Frontend Mentor)",
         description : "A landing page",

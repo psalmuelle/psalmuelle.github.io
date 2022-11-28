@@ -3,7 +3,8 @@ import Header from "../../components/Header";
 import Footer from "../../components/Footer";
 import { HomeContainer, Section, MantraSection, ProjectSection,
 ProjectList, SkillSection, SkillContent, AboutSection, AboutContent } from "./Home.styled";
-
+import { LazyLoadImage } from "react-lazy-load-image-component";
+import 'react-lazy-load-image-component/src/effects/blur.css'
 import IllustrationImg from "../../assets/3d-me.svg"
 import { useNavigate } from "react-router-dom";
 import {sampleProjects} from "../../projects";
@@ -34,13 +35,13 @@ return (
             <button onClick={()=> navigate("/contact")}>Contact Me!</button>
         </Section>
         <Section>
-            <img alt="3d illustration" src={IllustrationImg}/>
+            <LazyLoadImage style={{"zIndex": "-999999"}} effect="blur" alt="3d illustration" src={IllustrationImg}/>
             <div><span></span> Currently working on Portfolio</div>
         </Section>
         </HomeContainer>
       
         <MantraSection>
-            "I have an Intrinsic Motivation to learning about Tech and its space"
+            "I Have An Intrinsic Motivation To Learning!"
             <p>- Erinle Samuel</p>
         </MantraSection>
         <ProjectSection>
@@ -55,7 +56,11 @@ return (
             sampleProjects.map((val, i)=>{
                 return (
                     <li key={val.id}>
-              <img src={images[val.img_src]} alt={val.title} />
+              <LazyLoadImage
+              effect="blur"
+              src={images[val.img_src]}
+              alt={val.title}
+              />
               <p className='stack'>{val.stack}</p>
 
               <div className='info'>
@@ -129,7 +134,7 @@ return (
             <h2><span>#</span>about-me <div className="line"></div></h2>
            </div>
           <AboutContent>
-        
+         
           </AboutContent>
         </AboutSection>
         <Footer/>

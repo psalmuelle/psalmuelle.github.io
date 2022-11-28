@@ -3,6 +3,8 @@ import { Heading, Wrapper, Container } from "./Projects.styled";
 import Header from "../../components/Header";
 import Footer from "../../components/Footer";
 import {projects} from "../../projects";
+import {LazyLoadImage} from 'react-lazy-load-image-component';
+import 'react-lazy-load-image-component/src/effects/blur.css';
 
 const reversedItems = projects.map((item) => item).reverse();
 
@@ -38,7 +40,11 @@ export default function Projects() {
         {reversedItems.map((val, i) => {
           return (
             <Container key={val.id}>
-              <img src={images[val.img_src]} alt={val.title} />
+              <LazyLoadImage
+              alt={val.title}
+              effect="blur"
+              src={images[val.img_src]}
+              />
               <p className='stack'>{val.stack}</p>
 
               <div className='info'>

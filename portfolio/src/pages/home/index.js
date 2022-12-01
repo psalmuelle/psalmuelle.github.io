@@ -123,34 +123,43 @@ export default function Home() {
           </h2>
         </div>
         <SkillContent>
-          <div className='img__container'>
-            <img src={images["skills-img.svg"]} alt='skills section' />
-          </div>
-
           <div className='my-skills'>
             <figure>
               <h1>Languages</h1>
-              <figcaption>Javascript Typescript Python Java Kotlin</figcaption>
+              <figcaption>Javascript Typescript Python</figcaption>
             </figure>
 
             <div className='compartment__skill'>
               <figure>
-                <h1>Frameworks</h1>
+                <h1>Web Frameworks</h1>
                 <figcaption>
-                  Reactjs Nextjs React-Native Django Sass Tailwind BootStrap
+                  Nextjs Django BootStrap
                 </figcaption>
               </figure>
 
               <figure>
-                <h1>Tools</h1>
-                <figcaption>Git Github Jira</figcaption>
+                <h1>Libraries</h1>
+                <figcaption>React, React Native</figcaption>
               </figure>
+
             </div>
 
             <div className='compartment__skill'>
               <figure>
                 <h1>Tests</h1>
                 <figcaption>Jest Cypress</figcaption>
+              </figure>
+
+              <figure>
+                <h1>Others</h1>
+                <figcaption>HTML CSS RestAPI Framer-Motion Firebase</figcaption>
+              </figure>
+            </div>
+            <div className='compartment__skill'>
+
+              <figure>
+                <h1>Tools</h1>
+                <figcaption>Git Github Jira Linear</figcaption>
               </figure>
 
               <figure>

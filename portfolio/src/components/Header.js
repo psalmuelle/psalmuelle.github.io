@@ -7,7 +7,7 @@ import LinkedinLogo from "../assets/Linkedin.svg";
 import EmailLogo from "../assets/Email.svg";
 import { NavLink, useNavigate } from "react-router-dom";
 import styled from "styled-components";
-import {motion} from "framer-motion"
+//import {motion} from "framer-motion"
 
 const Wrapper = styled.header`
   display: flex;

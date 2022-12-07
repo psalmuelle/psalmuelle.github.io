@@ -149,19 +149,20 @@ export default function Home() {
                 <h1>Tests</h1>
                 <figcaption>Jest Cypress</figcaption>
               </figure>
-
-              <figure>
-                <h1>Others</h1>
-                <figcaption>HTML CSS RestAPI Framer-Motion Firebase</figcaption>
-              </figure>
-            </div>
-            <div className='compartment__skill'>
-
               <figure>
                 <h1>Tools</h1>
                 <figcaption>Git Github Jira Linear</figcaption>
               </figure>
+              
 
+
+            </div>
+            <div className='compartment__skill'>
+
+              <figure>
+                <h1>Soft-skills</h1>
+                <figcaption>Teamwork Problem-solving Time-management Critical-thinking Communication</figcaption>
+              </figure>
               <figure>
                 <h1>Others</h1>
                 <figcaption>HTML CSS RestAPI Framer-Motion Firebase</figcaption>
@@ -178,25 +179,16 @@ export default function Home() {
           </h2>
         </div>
         <AboutContent>
-          <div>
+          <div className="about__texts">
             <h1>Hi, I'm Erinle Samuel</h1>
             <p>
-              I am a frontend developer with a passion for building webapps that
-              help users accomplish what they need to do. I am a self-taught
-              developer who is always eager to learn new things. I am currently
-              working on my portfolio and I am open to new opportunities.
+              I am an enthusiastic and passionate Software Developer. I love life and music!
             </p>
-            <p>
-              Transforming my creativity and knowledge into a websites has been
-              my passion for over a year. I have been helping various clients to
-              establish their presence online. I always strive to learn about
-              the newest technologies and frameworks.
-            </p>
-            <button onClick={() => navigate("/contact")}>
-              Read More -&gt;
+            <button onClick={() => navigate("/about")}>
+              Read More
             </button>
           </div>
-          <div>
+          <div className="image__container">
             <LazyLoadImage width={300} src={SamPhoto}/>
           </div>
         </AboutContent>
@@ -210,7 +202,29 @@ export default function Home() {
           </h2>
         </div>
         <ContactMeContent>
-         
+         <form>
+          <div>
+            <label htmlFor="name">Name</label>
+            <input type="text" name="name" id="name" placeholder="Enter your name" />
+          </div>
+          <div>
+            <label htmlFor="email">Email</label>
+            <input type="email" name="email" id="email" placeholder="example@email.com" />
+          </div>
+          <div>
+            <label htmlFor="message">Message</label>
+            <textarea name="message" placeholder="Your message" id="message" cols="30" rows="10"></textarea>
+          </div>
+          <button type="submit">Send</button>
+         </form>
+
+         <div className="socials">
+            <h1>Get in touch</h1>
+            <p>Feel free to reach out to me via any of the platforms below</p>
+            <div className="social__links">
+              
+            </div>
+         </div>
         </ContactMeContent>
       </ContactMeSection>
       <Footer />

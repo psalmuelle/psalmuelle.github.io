@@ -230,9 +230,7 @@ h2{
     }
     @media (max-width: 900px) {
     font-size: 18px;
-    .line{
-        width: 0;
-    }
+
   }
 }
 p{
@@ -322,9 +320,7 @@ h2{
     }
     @media (max-width: 900px) {
     font-size: 18px;
-    .line{
-        width: 0;
-    }
+   
   }
 }
 p{
@@ -335,7 +331,50 @@ p{
 
 const AboutContent = styled.div`
 display: flex;
-flex-wrap: wrap;
+justify-content: space-evenly;
+align-items: center;
+gap: 16px;
+color: white;
+margin-top: 32px;
+.image__container{
+  width: 400px;
+  height: fit-content;
+  background: #fff;
+  img{
+    width: 100%;
+    display: block;
+  }
+}
+.about__texts{
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  max-width: 40rem;
+  gap:20px;
+  justify-content: center;
+
+  button{
+margin-top: 10px;
+padding: 10px 20px;
+color: white;
+border: 1px solid var(--secondary-color);
+background: none;
+border-radius: 2px;
+cursor: pointer;
+}
+}
+@media screen and (max-width: 755px) {
+  flex-direction: column-reverse;
+  gap: 2rem;
+  .image__container{
+    width:100%;
+    max-width: 300px;
+    img{
+      width:100%
+    }
+  }
+}
+    
 `
 
 //Contact me page
@@ -369,9 +408,7 @@ h2{
     }
     @media (max-width: 900px) {
     font-size: 18px;
-    .line{
-        width: 0;
-    }
+    
   }
 }
 p{
@@ -381,7 +418,56 @@ p{
 `
 
 const ContactMeContent = styled.div`
-
+width: 100%;
+form{
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  color:white;
+  margin: 0 auto;
+  margin-top: 32px;
+  width: 100%;
+  max-width: 28rem;
+  gap: 18px;
+  div{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 4px;
+    width: 100%;
+    
+    input{
+      width: 100%;
+      padding: 13px 12px;
+      border-radius: 4px;
+      border: 0;
+      font-size: 16px;
+    }
+    textarea{
+      width: 100%;
+      padding: 13px 12px;
+      border-radius: 4px;
+      border: 0;
+      resize: vertical;
+      font-size: 16px;
+    }
+  }
+}
+.socials{
+  color: white;
+  margin-top: 3rem;
+}
+button{
+margin-top: 10px;
+padding: 10px 20px;
+color: white;
+border: 1px solid var(--secondary-color);
+background: none;
+border-radius: 2px;
+width: 100%;
+cursor: pointer;
+}
 `
 
 

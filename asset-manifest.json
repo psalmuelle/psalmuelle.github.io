@@ -1,21 +1,45 @@
 {
   "files": {
-    "main.css": "/static/css/main.799fc156.css",
-    "main.js": "/static/js/main.47bd00ad.js",
-    "static/media/proj-example.png": "/static/media/proj-example.1441c3fd309c08277433.png",
+    "main.css": "/static/css/main.1fdffc0b.css",
+    "main.js": "/static/js/main.2ebebd86.js",
+    "static/media/erinle_sam.png": "/static/media/erinle_sam.ea771e11109b135b550c.png",
+    "static/media/Stats preview card component.png": "/static/media/Stats preview card component.a70b7cde631bca585ea1.png",
+    "static/media/Base Apparel coming soon page-min.png": "/static/media/Base Apparel coming soon page-min.97f6a963a71c9b171c8e.png",
     "static/media/3d-me.svg": "/static/media/3d-me.fcd123546f9998c080c7e52ed4c6b5f3.svg",
+    "static/media/Stats preview card component-min.png": "/static/media/Stats preview card component-min.7f53b804821e70de5f89.png",
+    "static/media/snap-min.png": "/static/media/snap-min.697619fe221a89eb58f5.png",
+    "static/media/skills-img.svg": "/static/media/skills-img.448ab50eb1ecd83ea25b.svg",
+    "static/media/Article preview component-min.png": "/static/media/Article preview component-min.fffd3c23b81765167591.png",
+    "static/media/slick-webapp-min.png": "/static/media/slick-webapp-min.01366b486c14b101c668.png",
+    "static/media/social-proof-min.png": "/static/media/social-proof-min.92375192f398f5cf89ba.png",
+    "static/media/FAQ Accordion Card-min.png": "/static/media/FAQ Accordion Card-min.ce98039ceefb9a571c87.png",
+    "static/media/portfolio-site-min.png": "/static/media/portfolio-site-min.091dfb8e82ea746f1639.png",
+    "static/media/qr-swift-min.png": "/static/media/qr-swift-min.a3afd51544196edb24f1.png",
+    "static/media/Profile card component-min.png": "/static/media/Profile card component-min.7d1fb2b566870429a68d.png",
+    "static/media/Interactive rating component-min.png": "/static/media/Interactive rating component-min.fe553f5730e4487f1854.png",
+    "static/media/Order summary card-min.png": "/static/media/Order summary card-min.8e5640122c3ddd6d5f74.png",
+    "static/media/NFT preview card component-min.png": "/static/media/NFT preview card component-min.3affbeb68e6b436a1f2a.png",
+    "static/media/personal portfolio logo.svg": "/static/media/personal portfolio logo.dbe178e3034ac2a1d5d7.svg",
+    "static/media/Four card feature section-min.png": "/static/media/Four card feature section-min.39cc2b28ea34a7b5743d.png",
+    "static/media/preview card component-min.png": "/static/media/preview card component-min.3748991fbbe4c8ce2c47.png",
+    "static/media/Single Price-min.png": "/static/media/Single Price-min.911420c193c2615f9568.png",
+    "static/media/Ping coming soon page-min.png": "/static/media/Ping coming soon page-min.0468021a9e02cc653f81.png",
+    "static/media/QR code component-min.png": "/static/media/QR code component-min.6a47688794478f7474a5.png",
     "static/media/logo-light.svg": "/static/media/logo-light.f7f4722248042439d1c9c26cfa336fde.svg",
+    "static/media/logo-dark.svg": "/static/media/logo-dark.b663e7352439c10c9468.svg",
     "static/media/Github.svg": "/static/media/Github.4e7ef7925f74414aa4a74a6389a312ab.svg",
+    "static/media/Dots.svg": "/static/media/Dots.6e33fd923b2a31d9872d.svg",
+    "static/media/Twitter.svg": "/static/media/Twitter.4be1873180e49a62c6a4.svg",
     "static/media/Linkedin.svg": "/static/media/Linkedin.d81e5a385fe7336ec5abb96d77e56b49.svg",
     "static/media/Email.svg": "/static/media/Email.3bd9bfdf21e1e81839055a78f4f586de.svg",
     "index.html": "/index.html",
     "static/media/close-bar.svg": "/static/media/close-bar.3a98eca05a32b4a6e4c88a584557e594.svg",
     "static/media/open-bar.svg": "/static/media/open-bar.f6fcff29085b4064797f547ab8a1a6b0.svg",
-    "main.799fc156.css.map": "/static/css/main.799fc156.css.map",
-    "main.47bd00ad.js.map": "/static/js/main.47bd00ad.js.map"
+    "main.1fdffc0b.css.map": "/static/css/main.1fdffc0b.css.map",
+    "main.2ebebd86.js.map": "/static/js/main.2ebebd86.js.map"
   },
   "entrypoints": [
-    "static/css/main.799fc156.css",
-    "static/js/main.47bd00ad.js"
+    "static/css/main.1fdffc0b.css",
+    "static/js/main.2ebebd86.js"
   ]
 }

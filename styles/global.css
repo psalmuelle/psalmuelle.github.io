@@ -1,0 +1,19 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+
+}
+
+
+body {
+  
+}
+
+
+.app_bg{
+  @apply relative
+
+}
+

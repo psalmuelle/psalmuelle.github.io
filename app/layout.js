@@ -1,6 +1,7 @@
 import "@/styles/global.css";
 import { Fira_Sans } from "next/font/google";
 import Nav from "@/components/Nav";
+import Footer from "@/components/Footer";
 
 const fira_sans = Fira_Sans({
   subsets: ["latin"],
@@ -17,10 +18,9 @@ export default function RootLayout({ children }) {
   return (
     <html lang='en'>
       <body className={`${fira_sans.className}`}>
-        <main>
-          <Nav />
-          {children}
-        </main>
+        <Nav />
+        <main>{children}</main>
+        <Footer />
       </body>
     </html>
   );

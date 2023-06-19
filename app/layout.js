@@ -1,11 +1,12 @@
+'use client'
 import "@/styles/global.css";
-import { Fira_Sans } from "next/font/google";
+import {  Inter } from "next/font/google";
 import Nav from "@/components/Nav";
 import Footer from "@/components/Footer";
+import {usePathname} from 'next/navigation'
 
-const fira_sans = Fira_Sans({
+const inter = Inter({
   subsets: ["latin"],
-  weight: ["300", "400", "700"],
 });
 
 export const metadata = {
@@ -15,10 +16,11 @@ export const metadata = {
 };
 
 export default function RootLayout({ children }) {
+  const currentRoute = usePathname()
   return (
     <html lang='en'>
-      <body className={`${fira_sans.className}`}>
-        <Nav />
+      <body className={`${inter.className}`}>
+        <Nav activeLink={currentRoute}/>
         <main>{children}</main>
         <Footer />
       </body>

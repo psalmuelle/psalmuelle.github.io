@@ -8,7 +8,7 @@ import {
   AiOutlineInfoCircle,
   AiOutlineLinkedin,
   AiOutlineGithub,
-  AiOutlinePhone,
+  AiOutlineInbox,
 } from "react-icons/ai";
 import { FiHome, FiTwitter, FiMenu } from "react-icons/fi";
 import { GrProjects, GrContact } from "react-icons/gr";
@@ -28,8 +28,11 @@ const NavLink = ({ title, href, icon, activeLink }) => {
 
 const SocialLink = ({ href, title, icon, followers }) => {
   return (
-    <Link href={href} target='_blank'>
-      <div>
+    <Link
+      className='flex justify-between items-center p-2 rounded-md last-of-type:justify-center hover:bg-gray-900'
+      href={href}
+      target='_blank'>
+      <div className='flex justify-center items-center gap-1'>
         {icon}
         <p>{title}</p>
       </div>
@@ -100,7 +103,7 @@ const Nav = ({ activeLink }) => {
         />
       </div>
 
-      <div className='bg-black flex justify-center flex-col gap-4'>
+      <div className='glassmorphism bg-opacity-50 bg-gray-50 mt-6 mb-2 text- rounded-md py-4 px-2 flex justify-center flex-col gap-3'>
         <SocialLink
           href={"https://www.linkedin.com/in/erinle-samuel/"}
           title={"LinkedIn"}
@@ -130,9 +133,9 @@ const Nav = ({ activeLink }) => {
         />
 
         <SocialLink
-          href={"tel:+2348158842213"}
-          title={"Call"}
-          icon={<AiOutlinePhone />}
+          href={"mailto:psalmuelle1@gmail.com"}
+          title={"Email"}
+          icon={<AiOutlineInbox />}
         />
       </div>
     </nav>

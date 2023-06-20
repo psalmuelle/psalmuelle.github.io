@@ -29,7 +29,7 @@ const NavLink = ({ title, href, icon, activeLink }) => {
 const SocialLink = ({ href, title, icon, followers }) => {
   return (
     <Link
-      className='flex justify-between items-center p-2 rounded-md last-of-type:justify-center hover:bg-gray-900'
+      className='flex justify-between items-center p-2 rounded-md last-of-type:justify-center hover:bg-black'
       href={href}
       target='_blank'>
       <div className='flex justify-center items-center gap-1'>
@@ -50,7 +50,7 @@ const Nav = ({ activeLink }) => {
   };
 
   return (
-    <nav className='glassmorphism text-white p-4 bg-[rgba(116,29,216,1)] w-64'>
+    <nav className='glassmorphism text-white p-4 bg-[rgba(116,29,216,0.9)] w-64'>
       <div className='flex justify-between items-center '>
         <div className='border-2 border-white px-2 py-3.5 rounded-full'>
           <Image
@@ -66,7 +66,7 @@ const Nav = ({ activeLink }) => {
         </div>
       </div>
 
-      <div className='mt-10 flex justify-center flex-col gap-4'>
+      <div className='mt-10 flex justify-center flex-col gap-2'>
         <NavLink
           title={"Home"}
           activeLink={activeLink}
@@ -103,7 +103,7 @@ const Nav = ({ activeLink }) => {
         />
       </div>
 
-      <div className='glassmorphism bg-opacity-50 bg-gray-50 mt-6 mb-2 text- rounded-md py-4 px-2 flex justify-center flex-col gap-3'>
+      <div className='glassmorphism bg-opacity-50 bg-gray-50 mt-6 mb-2 text- rounded-md py-4 px-2 flex justify-center flex-col gap-2'>
         <SocialLink
           href={"https://www.linkedin.com/in/erinle-samuel/"}
           title={"LinkedIn"}

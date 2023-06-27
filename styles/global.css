@@ -9,16 +9,21 @@
 }
 
 body {
-  background-color: white;
+  background-color: rgb(0, 0, 0);
+  color: white
+  
 }
 
 .glassmorphism {
-  @apply rounded-md bg-clip-padding backdrop-filter backdrop-blur-md bg-opacity-30;
+  @apply rounded-lg bg-clip-padding backdrop-filter backdrop-blur-md bg-opacity-30;
 }
 .active_btn {
-  @apply bg-[rgba(255,255,255,0.3)] rounded-md;
+  @apply bg-[rgba(255,255,255,0.3)] rounded-lg;
 }
 
 .nav_link {
-  @apply flex items-center hover:bg-[rgba(255,255,255,0.2)] hover:opacity-90 gap-4 rounded-md justify-start text-white px-4 py-2.5 font-semibold;
+  @apply flex items-center hover:bg-[rgba(255,255,255,0.2)] hover:opacity-90 gap-4 rounded-lg justify-start text-white px-4 py-2.5 font-semibold;
+}
+.mobile_nav{
+  @apply max-xl:w-11/12 max-xl:mx-auto
 }

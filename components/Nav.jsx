@@ -28,24 +28,6 @@ const NavLink = ({ title, href, icon, activeLink, hideTitle }) => {
   );
 };
 
-const SocialLink = ({ href, title, icon, followers, hideTitle }) => {
-  return (
-    <Link
-      className={`flex justify-between items-center p-2 rounded-lg last-of-type:justify-center hover:bg-black ${
-        hideTitle ? "block w-fit p-3" : ""
-      }`}
-      href={href}
-      target='_blank'>
-      <div className='flex justify-center items-center gap-1'>
-        {icon}
-        {!hideTitle ? <p>{title}</p> : ""}
-      </div>
-
-      {!hideTitle ? <p>{followers}</p> : ""}
-    </Link>
-  );
-};
-
 const Nav = ({ activeLink }) => {
   const [hideNav, setHideNav] = useState(false);
   const [mobileNav, setMobileNav] = useState(false);
@@ -59,23 +41,17 @@ const Nav = ({ activeLink }) => {
 
   return (
     <nav
-      className={`glassmorphism text-white p-4 max-xl:p-2 bg-[rgba(116,29,216,0.9)] w-64 ${
-        hideNav ? "w-fit" : ""
-      } mobile_nav`}>
+      className={`glassmorphism z-10 text-black p-4 max-xl:p-2 ${
+        hideNav ? "w-fit" : "w-60"
+      } mobile_nav absolute top-4 xl:left-4 xl:min-h-[450px] xl:h-[80vh] max-xl:mx-auto max-xl:right-0 max-xl:left-0`}>
       <div className=''>
         {/* DeskTop Navigation Menu */}
         <div
           className={`flex justify-between items-center ${
             hideNav ? "flex-col-reverse gap-6" : ""
           } max-xl:hidden`}>
-          <div className='border-2 border-white px-2 py-3.5 rounded-full'>
-            <Image
-              className='invert'
-              src={"/es1.png"}
-              alt='Logo'
-              width={32}
-              height={32}
-            />
+          <div className='border-2 border-black px-2 py-3.5 rounded-full'>
+            <Image src={"/es1.png"} alt='Logo' width={32} height={32} />
           </div>
           <div onClick={HideNavTexts} className='p-3 cursor-pointer active_btn'>
             {hideNav ? <AiOutlineVerticalLeft /> : <AiOutlineVerticalRight />}
@@ -84,14 +60,8 @@ const Nav = ({ activeLink }) => {
 
         {/* Mobile Navigation Menu */}
         <div className={`flex justify-between items-center xl:hidden`}>
-          <div className='border-2 border-white px-2 py-3 rounded-full'>
-            <Image
-              className='invert'
-              src={"/es1.png"}
-              alt='Logo'
-              width={24}
-              height={24}
-            />
+          <div className='border-2 border-black px-2 py-3 rounded-full'>
+            <Image src={"/es1.png"} alt='Logo' width={24} height={24} />
           </div>
           <div
             onClick={HideMobileNav}
@@ -114,7 +84,7 @@ const Nav = ({ activeLink }) => {
               title={"Projects"}
               activeLink={activeLink}
               href={"/projects"}
-              icon={<GrProjects size={hideNav ? 20 : ""} className='invert' />}
+              icon={<GrProjects size={hideNav ? 20 : ""} />}
               hideTitle={hideNav}
             />
 
@@ -138,48 +108,7 @@ const Nav = ({ activeLink }) => {
               title={"Contact"}
               activeLink={activeLink}
               href={"/contact"}
-              icon={<GrContact className='invert' size={hideNav ? 20 : ""} />}
-              hideTitle={hideNav}
-            />
-          </div>
-
-          <div className='glassmorphism bg-opacity-50 bg-gray-50 mt-6 mb-2 text- rounded-md py-4 px-2 flex justify-center flex-col gap-2'>
-            <SocialLink
-              href={"https://www.linkedin.com/in/erinle-samuel/"}
-              title={"LinkedIn"}
-              icon={<AiOutlineLinkedin size={hideNav ? 20 : ""} />}
-              followers={"200"}
-              hideTitle={hideNav}
-            />
-
-            <SocialLink
-              href={"https://github.com/psalmuelle"}
-              title={"GitHub"}
-              icon={<AiOutlineGithub size={hideNav ? 20 : ""} />}
-              followers={"15"}
-              hideTitle={hideNav}
-            />
-
-            <SocialLink
-              href={"https://medium.com/@erinle-sam"}
-              title={"Medium"}
-              icon={<BsMedium size={hideNav ? 20 : ""} />}
-              followers={"50"}
-              hideTitle={hideNav}
-            />
-
-            <SocialLink
-              href={"https://twitter.com/erinle_sam"}
-              title={"Twitter"}
-              icon={<FiTwitter size={hideNav ? 20 : ""} />}
-              followers={"50"}
-              hideTitle={hideNav}
-            />
-
-            <SocialLink
-              href={"mailto:psalmuelle1@gmail.com"}
-              title={"Email"}
-              icon={<AiOutlineSend size={hideNav ? 20 : ""} />}
+              icon={<GrContact size={hideNav ? 20 : ""} />}
               hideTitle={hideNav}
             />
           </div>

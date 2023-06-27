@@ -1,19 +1,33 @@
 import Link from "next/link";
+import { AiOutlineGithub, AiOutlineLinkedin } from "react-icons/ai";
+import {MdOutlineMail} from 'react-icons/md'
+import { BsMedium } from "react-icons/bs";
+import { FiTwitter } from "react-icons/fi";
+
+
+const FooterLink =({href, icon})=>{
+  return(
+    <Link href={href} >
+      {icon}
+    </Link>
+  )
+}
+
 
 const Footer = () => {
   return (
-    <footer className='relative border-t border-white mt-20 py-10 pt-8 flex justify-center items-center flex-col text-center'>
-      <div>
-        <p>Erinle Samuel</p>
-        <p className="text-sm">Software Engineer (Web)</p>
-        <p className="text-sm opacity-80">&copy; {new Date().getFullYear()}</p>
-      </div>
-      <Link
-        href='https://github.com/psalmuelle/psalmuelle.github.io#readme'
-        target='_blank'
-        className='absolute bottom-3 right-6 text-blue-400 text-sm'>
-        #Design Attributes
-      </Link>
+    <footer className=''>
+    <div>
+    <FooterLink href={"https://www.linkedin.com/in/erinle-samuel/"} icon={<AiOutlineLinkedin size={20} />} />
+
+    <FooterLink href={"https://github.com/psalmuelle"} icon={<AiOutlineGithub size={20} />} />
+
+    <FooterLink href={"https://medium.com/@erinle-sam"} icon={<BsMedium size={20} />} />
+
+    <FooterLink href={"https://twitter.com/erinle_sam"} icon={<FiTwitter size={20} />} />
+
+    <FooterLink href={"mailto:psalmuelle1@gmail.com"} icon={<MdOutlineMail size={20} />} />
+    </div>
     </footer>
   );
 };

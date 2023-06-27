@@ -6,13 +6,10 @@ import {
   AiOutlineVerticalLeft,
   AiOutlineVerticalRight,
   AiOutlineInfoCircle,
-  AiOutlineLinkedin,
-  AiOutlineGithub,
-  AiOutlineSend,
 } from "react-icons/ai";
-import { FiHome, FiTwitter, FiMenu } from "react-icons/fi";
+import { FiHome, FiMenu } from "react-icons/fi";
 import { GrProjects, GrContact } from "react-icons/gr";
-import { BsPencilSquare, BsMedium } from "react-icons/bs";
+import { BsPencilSquare } from "react-icons/bs";
 import { MdClose } from "react-icons/md";
 
 const NavLink = ({ title, href, icon, activeLink, hideTitle }) => {

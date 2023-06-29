@@ -16,7 +16,7 @@ export default function RootLayout({ children }) {
       <body className={`${inter.className}`}>
         <main className='relative'>
           <Nav activeLink={currentRoute} />
-          <div className='pt-32 px-5 max-xl:px-[5%] xl:pl-96 '>{children}</div>
+          <div className='pt-32 px-5 max-xl:px-[5%] xl:pl-96 max-xl:pb-20'>{children}</div>
           <Footer /> 
         </main>
       </body>

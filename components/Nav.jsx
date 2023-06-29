@@ -2,12 +2,9 @@
 import { useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
-import {
-  AiOutlineVerticalLeft,
-  AiOutlineVerticalRight,
-  AiOutlineInfoCircle,
-} from "react-icons/ai";
-import { FiHome, FiMenu } from "react-icons/fi";
+import { usePathname } from "next/navigation";
+import { BiLeftArrow, BiRightArrow} from 'react-icons/bi'
+import { FiHome, FiInfo, FiMenu } from "react-icons/fi";
 import { GrProjects, GrContact } from "react-icons/gr";
 import { BsPencilSquare } from "react-icons/bs";
 import { MdClose } from "react-icons/md";
@@ -36,6 +33,8 @@ const Nav = ({ activeLink }) => {
     setMobileNav((prev) => !prev);
   };
 
+  const pathName = usePathname();
+
   return (
     <nav
       className={`glassmorphism z-10 text-[#0b0c15] p-4 max-xl:p-2 ${
@@ -50,8 +49,8 @@ const Nav = ({ activeLink }) => {
           <div className='border-4 border-[#0b0c15] px-2 py-[13px] rounded-full'>
             <Image src={"/es1.png"} alt='Logo' width={28} height={28} />
           </div>
-          <div onClick={HideNavTexts} className='p-3 cursor-pointer active_btn'>
-            {hideNav ? <AiOutlineVerticalLeft /> : <AiOutlineVerticalRight />}
+          <div onClick={HideNavTexts} className='p-3 cursor-pointer rounded-lg bg-white/60'>
+            {hideNav ? <BiRightArrow/> : <BiLeftArrow />}
           </div>
         </div>
 
@@ -69,45 +68,55 @@ const Nav = ({ activeLink }) => {
 
         <div className={` ${mobileNav ? "max-xl:block" : "max-xl:hidden"}`}>
           <div className={`mt-10 flex justify-center flex-col gap-2`}>
-            <NavLink
-              title={"Home"}
-              activeLink={activeLink}
-              href={"/"}
-              icon={<FiHome size={hideNav ? 20 : ""} />}
-              hideTitle={hideNav}
-            />
+            {!(pathName === "/") && (
+              <NavLink
+                title={"Home"}
+                activeLink={activeLink}
+                href={"/"}
+                icon={<FiHome size={hideNav ? 20 : ""} />}
+                hideTitle={hideNav}
+              />
+            )}
 
-            <NavLink
-              title={"Projects"}
-              activeLink={activeLink}
-              href={"/projects"}
-              icon={<GrProjects size={hideNav ? 20 : ""} />}
-              hideTitle={hideNav}
-            />
+            {!(pathName === "/about") && (
+              <NavLink
+                title={"About"}
+                href={"/about"}
+                icon={<FiInfo size={hideNav ? 21 : 19} />}
+                activeLink={activeLink}
+                hideTitle={hideNav}
+              />
+            )}
 
-            <NavLink
-              title={"Blog"}
-              activeLink={activeLink}
-              href={"/blog"}
-              icon={<BsPencilSquare size={hideNav ? 20 : ""} />}
-              hideTitle={hideNav}
-            />
+            {!(pathName === "/projects") && (
+              <NavLink
+                title={"Projects"}
+                activeLink={activeLink}
+                href={"/projects"}
+                icon={<GrProjects size={hideNav ? 20 : ""} />}
+                hideTitle={hideNav}
+              />
+            )}
 
-            <NavLink
-              title={"About"}
-              href={"/about"}
-              icon={<AiOutlineInfoCircle size={hideNav ? 20 : ""} />}
-              activeLink={activeLink}
-              hideTitle={hideNav}
-            />
+            {!(pathName === "/blog") && (
+              <NavLink
+                title={"Blog"}
+                activeLink={activeLink}
+                href={"/blog"}
+                icon={<BsPencilSquare size={hideNav ? 20 : ""} />}
+                hideTitle={hideNav}
+              />
+            )}
 
-            <NavLink
-              title={"Contact"}
-              activeLink={activeLink}
-              href={"/contact"}
-              icon={<GrContact size={hideNav ? 20 : ""} />}
-              hideTitle={hideNav}
-            />
+            {!(pathName === "/contact") && (
+              <NavLink
+                title={"Contact"}
+                activeLink={activeLink}
+                href={"/contact"}
+                icon={<GrContact size={hideNav ? 20 : ""} />}
+                hideTitle={hideNav}
+              />
+            )}
           </div>
         </div>
       </div>

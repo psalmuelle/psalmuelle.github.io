@@ -29,7 +29,7 @@ const Footer = () => {
 
         <FooterLink
           href={"https://twitter.com/erinle_sam"}
-          icon={<FiTwitter size={24} />}
+          icon={<FiTwitter size={24} className="hover"/>}
         />
 
         <FooterLink

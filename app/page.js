@@ -19,9 +19,8 @@ export default function Home() {
       <div>
         <p className=''>
           A frontend developer, and javascript engineer. I spend most of my time
-          bringing ideas to live! I'm passionate about cutting-edge,
-          pixel-perfect, beautiful interface and intuitively implemented user
-          interface/experience.
+          bringing ideas to life! I'm passionate about cutting-edge,
+          pixel-perfect, beautiful interface and intuitively implemented user experience.
         </p>
         <p className='mt-4'>
           When I'm not coding, I write{" "}
@@ -30,7 +29,6 @@ export default function Home() {
           </Link>{" "}
           to share knowledge and insights on web development.
         </p>
-        <p className='mt-4'>I love music and reading books.</p>
       </div>
 
       <div

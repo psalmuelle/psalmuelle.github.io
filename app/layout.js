@@ -9,11 +9,6 @@ const inter = Inter({
   subsets: ["latin"],
 });
 
-export const metadata = {
-  title: "Erinle Samuel",
-  description:
-    "My name is Sam, A fullStack Developer with Experience in Reactjs, Nextjs, NodeJs, ExpressJs.",
-};
 
 export default function RootLayout({ children }) {
   const currentRoute = usePathname();

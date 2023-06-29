@@ -9,7 +9,6 @@ const inter = Inter({
   subsets: ["latin"],
 });
 
-
 export default function RootLayout({ children }) {
   const currentRoute = usePathname();
   return (

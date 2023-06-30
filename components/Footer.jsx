@@ -1,7 +1,7 @@
 import Link from "next/link";
 import { AiOutlineGithub, AiOutlineLinkedin } from "react-icons/ai";
 import { MdOutlineMail } from "react-icons/md";
-import { BsMedium } from "react-icons/bs";
+import { BsMedium, BsWhatsapp } from "react-icons/bs";
 import { FiTwitter } from "react-icons/fi";
 
 const FooterLink = ({ href, icon }) => {
@@ -35,6 +35,11 @@ const Footer = () => {
         <FooterLink
           href={"mailto:psalmuelle1@gmail.com"}
           icon={<MdOutlineMail size={24} />}
+        />
+
+<FooterLink
+          href={"https://wa.link/07bpvp"}
+          icon={<BsWhatsapp size={23} />}
         />
       </div>
     </footer>

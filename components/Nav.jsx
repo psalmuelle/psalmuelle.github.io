@@ -39,7 +39,7 @@ const Nav = ({ activeLink }) => {
     <nav
       className={`glassmorphism z-10 text-[#0b0c15] p-4 max-xl:p-2 ${
         hideNav ? "w-fit" : "w-60"
-      } mobile_nav absolute top-4 xl:left-4 xl:min-h-[450px] xl:h-[80vh] max-xl:mx-auto max-xl:right-0 max-xl:left-0`}>
+      } mobile_nav absolute top-4 xl:left-4 xl:min-h-[450px] xl:h-[95vh] max-xl:mx-auto max-xl:right-0 max-xl:left-0`}>
       <div className=''>
         {/* DeskTop Navigation Menu */}
         <div

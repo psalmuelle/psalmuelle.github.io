@@ -5,7 +5,7 @@ import { BsArrowRight } from "react-icons/bs";
 import { useRouter } from "next/navigation";
 
 export default function Home() {
-  const route = useRouter();
+  const router = useRouter();
   return (
     <div className='text-[#545454] max-w-4xl'>
       <div>
@@ -34,7 +34,7 @@ export default function Home() {
       </div>
 
       <div
-        onClick={() => route("/about")}
+        onClick={()=> router.push('/about')}
         className='mt-8 cursor-pointer flex gap-2 items-center '>
         <button className="btn">Know More About Me</button>
         <BsArrowRight size={20} />

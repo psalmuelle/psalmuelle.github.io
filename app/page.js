@@ -7,9 +7,9 @@ import { useRouter } from "next/navigation";
 export default function Home() {
   const route = useRouter();
   return (
-    <div className='text-[#545454]'>
+    <div className='text-[#545454] max-w-4xl'>
       <div>
-        <h2 className='text-[#545454] text-2xl'>Hi 👋,</h2>
+        <h2 className=' text-2xl'>Hi 👋,</h2>
         <h1 className='text-[#0b0c15] text-4xl tracking-widest font-extrabold my-4'>
           I'M ERINLE SAMUEL
         </h1>

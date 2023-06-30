@@ -3,7 +3,7 @@ import { useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import { usePathname } from "next/navigation";
-import { BiLeftArrow, BiRightArrow} from 'react-icons/bi'
+import { BiLeftArrow, BiRightArrow } from "react-icons/bi";
 import { FiHome, FiInfo, FiMenu } from "react-icons/fi";
 import { GrProjects, GrContact } from "react-icons/gr";
 import { BsPencilSquare } from "react-icons/bs";
@@ -49,8 +49,10 @@ const Nav = ({ activeLink }) => {
           <div className='border-4 border-[#0b0c15] px-2 py-[13px] rounded-full'>
             <Image src={"/es1.png"} alt='Logo' width={28} height={28} />
           </div>
-          <div onClick={HideNavTexts} className='p-3 cursor-pointer rounded-lg bg-white/60'>
-            {hideNav ? <BiRightArrow/> : <BiLeftArrow />}
+          <div
+            onClick={HideNavTexts}
+            className='p-3 cursor-pointer rounded-lg bg-white/60'>
+            {hideNav ? <BiRightArrow /> : <BiLeftArrow />}
           </div>
         </div>
 
@@ -61,12 +63,17 @@ const Nav = ({ activeLink }) => {
           </div>
           <div
             onClick={HideMobileNav}
-            className='p-2 cursor-pointer active_btn'>
+            className='p-2 cursor-pointer rounded-lg bg-white/60'>
             {mobileNav ? <MdClose size={24} /> : <FiMenu size={24} />}
           </div>
         </div>
 
-        <div className={` ${mobileNav ? "max-xl:block" : "max-xl:hidden"}`}>
+        <div
+          className={` ${
+            mobileNav
+              ? "max-xl:flex items-center justify-center mt-"
+              : "max-xl:hidden"
+          }  `}>
           <div className={`mt-10 flex justify-center flex-col gap-2`}>
             {!(pathName === "/") && (
               <NavLink

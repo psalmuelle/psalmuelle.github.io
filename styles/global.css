@@ -40,7 +40,14 @@ html {
   -ms-text-size-adjust: 100%;
   -webkit-text-size-adjust: 100%;
 }
-
+::selection {
+  background: #666;
+  color: white;
+}
+::-moz-selection {
+  background: #666;
+  color: white;
+}
 main:before {
   background: #1b1b1b;
   content: "";
@@ -98,4 +105,24 @@ main:after {
 }
 .btn {
   @apply hover:underline decoration-blue-900;
+}
+.backlay{
+margin: 0;
+}
+.backlay h1{
+  font-size: 29.42vmin;
+  writing-mode: unset;
+  letter-spacing: -0.3rem;
+  white-space: pre;
+  color: #f9f7f6;
+  position: fixed;
+  right: 0rem;
+  opacity: 1;
+  z-index: -1;
+  bottom: 0px;
+}
+@media screen and (max-width:500px) {
+  .backlay h1{
+ bottom: 2rem;
+  }
 }

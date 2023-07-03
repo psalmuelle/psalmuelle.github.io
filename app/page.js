@@ -7,10 +7,10 @@ import { useRouter } from "next/navigation";
 export default function Home() {
   const router = useRouter();
   return (
-    <div className='text-[#545454] max-w-4xl'>
+    <div className='text-[#545454] max-w-4xl flex flex-col justify-between gap-8'>
       <div>
-        <h2 className=' text-2xl'>Hi 👋,</h2>
-        <h1 className='text-[#0b0c15] text-4xl tracking-widest font-extrabold my-4'>
+        <h2 className=' text-2xl mt-4'>Hi 👋,</h2>
+        <h1 className='text-[#0b0c15] text-4xl tracking-widest font-extrabold mt-8 '>
           I'M ERINLE SAMUEL
         </h1>
       </div>
@@ -35,7 +35,7 @@ export default function Home() {
 
       <div
         onClick={()=> router.push('/about')}
-        className='mt-8 cursor-pointer flex gap-2 items-center '>
+        className='mt-4 max-xl:mb-20 cursor-pointer flex gap-2 items-center '>
         <button className="btn">Know More About Me</button>
         <BsArrowRight size={20} />
       </div>

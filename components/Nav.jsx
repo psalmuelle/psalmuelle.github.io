@@ -9,13 +9,15 @@ import { GrProjects, GrContact } from "react-icons/gr";
 import { BsPencilSquare } from "react-icons/bs";
 import { MdClose } from "react-icons/md";
 
-const NavLink = ({ title, href, icon, activeLink, hideTitle }) => {
+const NavLink = ({ title, href, icon, activeLink, hideTitle, onClick }) => {
   return (
     <Link
       href={href}
       className={`nav_link ${activeLink === href ? "active_btn" : ""} ${
         hideTitle ? "block w-fit h-[47px]" : ""
-      }`}>
+      }`}
+      onClick={onClick}
+      >
       {icon}
       {!hideTitle ? <p>{title}</p> : ""}
     </Link>
@@ -73,7 +75,9 @@ const Nav = ({ activeLink }) => {
             mobileNav
               ? "max-xl:flex items-center justify-center mt-"
               : "max-xl:hidden"
-          }  `}>
+          }  `}
+          onClick={()=> setMobileNav(false)}
+          >
           <div className={`mt-10 flex justify-center flex-col gap-2`}>
             {!(pathName === "/") && (
               <NavLink
@@ -102,6 +106,7 @@ const Nav = ({ activeLink }) => {
                 href={"/projects"}
                 icon={<GrProjects size={hideNav ? 20 : ""} />}
                 hideTitle={hideNav}
+
               />
             )}
 

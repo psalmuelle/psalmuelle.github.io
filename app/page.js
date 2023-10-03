@@ -35,7 +35,7 @@ export default function Home() {
 
       <div
         onClick={()=> router.push('/about')}
-        className='mt-4 max-xl:mb-20 cursor-pointer flex gap-2 items-center '>
+        className='mt-4 max-xl:mb-10 cursor-pointer flex gap-2 items-center '>
         <button className="btn">Know More About Me</button>
         <BsArrowRight size={20} />
       </div>

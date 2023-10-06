@@ -38,17 +38,18 @@ const Nav = ({ activeLink }) => {
   const pathName = usePathname();
 
   return (
+    <div className="w-fit h-fit xl:fixed">
     <nav
-      className={`glassmorphism z-10 text-[#0b0c15] p-4 max-xl:p-2 ${
+      className={`glassmorphism z-10 text-main p-4 max-xl:p-2 ${
         hideNav ? "w-fit" : "w-60"
-      } mobile_nav absolute top-4 xl:left-4 xl:min-h-[450px] xl:h-[95vh] max-xl:mx-auto max-xl:right-0 max-xl:left-0`}>
-      <div className=''>
+      } mobile_nav absolute  top-4 xl:left-4 xl:min-h-[450px] xl:h-[95vh] max-xl:mx-auto max-xl:right-0 max-xl:left-0 `}>
+      <div>
         {/* DeskTop Navigation Menu */}
         <div
           className={`flex justify-between items-center ${
             hideNav ? "flex-col-reverse gap-6" : ""
           } max-xl:hidden`}>
-          <div className='border-4 border-[#0b0c15] px-2 py-[13px] rounded-full'>
+          <div className='border-4 border-main px-2 py-[13px] rounded-full'>
             <Image src={"/es1.png"} alt='Logo' width={28} height={28} />
           </div>
           <div
@@ -60,7 +61,7 @@ const Nav = ({ activeLink }) => {
 
         {/* Mobile Navigation Menu */}
         <div className={`flex justify-between items-center xl:hidden`}>
-          <div className='border-4 border-[#0b0c15] px-2 py-3 rounded-full'>
+          <div className='border-4 border-main px-2 py-3 rounded-full'>
             <Image src={"/es1.png"} alt='Logo' width={24} height={24} />
           </div>
           <div
@@ -133,6 +134,7 @@ const Nav = ({ activeLink }) => {
         </div>
       </div>
     </nav>
+    </div>
   );
 };
 

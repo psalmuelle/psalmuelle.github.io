@@ -26,14 +26,14 @@ const ProjectCard = ({
       <div className='w-full h-full bg-[url(/love-me.jpg)] bg-contain rounded-xl'>
         {/* <Image src={'/love-me.app.png'} alt="article" width={1000} height={288} className=" w-full h-auto"/> */}
       </div>
-      <div className='absolute top-0 right-0  w-full h-full bg-gradient-to-t from-[#545454]/90 to-white/50 rounded-lg flex justify-center items-end px-4'>
+      <div className='absolute top-0 right-0  w-full h-full bg-gradient-to-t from-secondary/90 to-white/50 rounded-lg flex justify-center items-end px-4'>
         <div className='text-white py-8'>
           <h2 className='font-bold text-4xl'>{projectName}</h2>
           <p className='my-4'>{title}</p>
           <div className='flex flex-wrap gap-4 my-2'>
             {techStack?.map((val, i) => {
               return (
-                <p key={i} className='rounded-full bg-[#545454] w-fit px-2 '>
+                <p key={i} className='rounded-full bg-secondary w-fit px-2 '>
                   {val}
                 </p>
               );

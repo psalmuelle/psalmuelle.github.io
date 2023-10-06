@@ -15,7 +15,7 @@ const Page = () => {
     <ProjectBarProvider>
       <div className='' beforeun>
         <h1 className='title'>Projects.</h1>
-        <div className='max-w-4xl mt-16 flex flex-wrap justify-center items-center'>
+        <div className='max-w-4xl mt-14 flex flex-wrap justify-center items-center gap-1'>
           {projects.map((val) => {
             return (
               <ProjectCard

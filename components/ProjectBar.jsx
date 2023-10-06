@@ -57,7 +57,7 @@ export default function ProjectBar({
                 return (
                   <div
                     key={i}
-                    className='rounded-lg font-semibold bg-[#545454]/50 px-2 py-1'>
+                    className='rounded-lg font-semibold bg-secondary/50 px-2 py-1'>
                     {val}
                   </div>
                 );
@@ -82,7 +82,7 @@ export default function ProjectBar({
           </div>
           <a
             href={liveUrl}
-            className='fixed bottom-0 w-full max-w-lg right-0 text-white py-4 bg-[#0b0c15] flex justify-center items-center gap-1 cursor-pointer'>
+            className='fixed bottom-0 w-full max-w-lg right-0 text-white py-4 bg-main flex justify-center items-center gap-1 cursor-pointer'>
             <p className='font-semibold'>Open Project</p>
             <MdLaunch size={24} />
           </a>

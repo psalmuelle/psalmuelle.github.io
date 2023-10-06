@@ -96,7 +96,7 @@ const Page = () => {
 
           <button
             type='submit'
-            className='bg-[#0b0c15] text-white w-48 h-14 rounded-lg font-semibold'>
+            className='bg-main text-white w-48 h-14 rounded-lg font-semibold'>
             Send Message
           </button>
         </form>
@@ -108,7 +108,7 @@ const Page = () => {
           )
         }
       </div>
-      <BottomNav path={"/"} text={"Go Back Home"} />
+      <BottomNav path={"/"} text={"Go Back Home."} />
     </div>
   );
 };

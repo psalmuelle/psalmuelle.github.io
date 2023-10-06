@@ -25,7 +25,7 @@ export default function RootLayout({ children }) {
             </h1>
           </div>
           <Nav activeLink={currentRoute} />
-          <div className='pt-32 px-5 max-xl:px-[5%] xl:pl-96 max-xl:pb-20'>
+          <div className='pt-32 px-5 max-xl:px-[5%] xl:pl-80 xl:pr-8 max-xl:pb-20'>
             {children}
           </div>
           <Footer />

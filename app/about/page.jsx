@@ -7,11 +7,9 @@ import { SiTypescript } from "react-icons/si";
 import { RiReactjsLine } from "react-icons/ri";
 import { TbBrandNextjs } from "react-icons/tb";
 import Link from "next/link";
-import { useRouter } from "next/navigation";
-import { BsArrowRight } from "react-icons/bs";
+import BottomNav from "@/components/BottomNav";
 
 const AboutPage = () => {
-  const router = useRouter();
   const skills = [
     {
       id: 1,
@@ -35,7 +33,7 @@ const AboutPage = () => {
     },
   ];
   return (
-    <div>
+    <div className="max-w-5xl">
       <h1 className='title'>About Me.</h1>
       <div>
         <div className='mt-8'>
@@ -174,12 +172,8 @@ const AboutPage = () => {
             <hr className='mb-10' />
           </div>
         </div>
-        <div
-          onClick={() => router.push("/projects")}
-          className='mt-4 max-xl:mb-10 cursor-pointer flex gap-2 items-center '>
-          <button className='btn'>Lets Continue To Projects</button>
-          <BsArrowRight size={20} />
-        </div>
+
+        <BottomNav path={'/projects'} text={'Lets Continue To Projects.'}/>
       </div>
     </div>
   );

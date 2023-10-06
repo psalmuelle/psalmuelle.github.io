@@ -7,7 +7,7 @@ export default function BlogCard() {
         {/* <Image src={'/love-me.app.png'} alt="article" width={1000} height={288} className=" w-full h-auto"/> */}
       </div>
 
-      <div className='absolute w-full h-full top-0 right-0 bg-gradient-to-t from-[#545454]/90 to-white/50 rounded-xl flex flex-col justify-end p-4 text-white'>
+      <div className='absolute w-full h-full top-0 right-0 bg-gradient-to-t from-main/90 to-white/50 rounded-xl flex flex-col justify-end p-4 text-white'>
         <h1 className='text-2xl font-bold '>
           How To Build A Mainstream Example
         </h1>

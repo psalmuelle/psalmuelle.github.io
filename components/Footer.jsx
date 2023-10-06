@@ -11,7 +11,7 @@ const FooterLink = ({ href, icon }) => {
 const Footer = () => {
   return (
     <footer className='w-full xl:w-fit xl:ml-[305px] xl:mt-10 '>
-      <div className='max-xl:fixed bottom-0 flex max-xl:justify-between justify-center items-center mobile_glassmorphism rounded-t-2xl w-full p-4 md:px-20 xl:gap-8'>
+      <div className='max-xl:fixed bottom-0  flex max-xl:justify-between justify-center items-center mobile_glassmorphism rounded-t-2xl w-full p-4 md:px-20 xl:gap-8 xl:mb-14'>
         <FooterLink
           href={"https://www.linkedin.com/in/erinle-samuel/"}
           icon={<AiOutlineLinkedin size={24} />}

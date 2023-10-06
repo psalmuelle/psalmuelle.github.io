@@ -1,10 +1,10 @@
 "use client";
 import React, { useState } from "react";
 import ProjectCard from "@/components/ProjectCard";
-
 import { ProjectBarProvider } from "@/components/ProjectBarContext";
 import { projects } from "@/components/AppData";
 import ProjectBar from "@/components/ProjectBar";
+import BottomNav from "@/components/BottomNav";
 
 const Page = () => {
   const [id, setId] = useState();
@@ -15,7 +15,7 @@ const Page = () => {
     <ProjectBarProvider>
       <div className='' beforeun>
         <h1 className='title'>Projects.</h1>
-        <div className=' mt-16 grid grid-cols-2 max-md:grid-cols-1 justify-center items-center'>
+        <div className='max-w-4xl mt-16 flex flex-wrap justify-center items-center'>
           {projects.map((val) => {
             return (
               <ProjectCard
@@ -41,6 +41,9 @@ const Page = () => {
           githubUrl={projects[id]?.githubUrl}
           liveUrl={projects[id]?.websiteUrl}
         />
+
+       
+        <BottomNav path={'/about'} text={"Let's Go To My Resume."}/>
       </div>
     </ProjectBarProvider>
   );

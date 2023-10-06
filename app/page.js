@@ -1,11 +1,9 @@
 "use client";
 
 import Link from "next/link";
-import { BsArrowRight } from "react-icons/bs";
-import { useRouter } from "next/navigation";
+import BottomNav from "@/components/BottomNav";
 
 export default function Home() {
-  const router = useRouter();
   return (
     <div className='text-[#545454] max-w-4xl flex flex-col justify-between gap-8'>
       <div>
@@ -33,12 +31,7 @@ export default function Home() {
         </p>
       </div>
 
-      <div
-        onClick={()=> router.push('/about')}
-        className='mt-4 max-xl:mb-10 cursor-pointer flex gap-2 items-center '>
-        <button className="btn">Know More About Me</button>
-        <BsArrowRight size={20} />
-      </div>
+      <BottomNav path={"/about"} text={"Know More Aboute Me."} />
     </div>
   );
 }

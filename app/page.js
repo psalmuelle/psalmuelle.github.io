@@ -13,7 +13,7 @@ export default function Home() {
         </h1>
       </div>
       <div>
-        <p className=''>
+        <p>
           A frontend developer, and javascript engineer. I spend most of my time
           bringing{" "}
           <Link href={"/projects"} className='text_link'>

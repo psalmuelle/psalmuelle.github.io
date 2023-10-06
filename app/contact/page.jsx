@@ -1,7 +1,7 @@
 "use client";
 import React, { useState, useRef } from "react";
 import BottomNav from "@/components/BottomNav";
-import emailjs from '@emailjs/browser';
+import emailjs from "@emailjs/browser";
 
 const Page = () => {
   const [formData, setFormData] = useState({
@@ -9,7 +9,7 @@ const Page = () => {
     email: "",
     message: "",
   });
-  const form = useRef()
+  const form = useRef();
   const [errors, setErrors] = useState({});
   const [confirmMsg, setConfirmMsg] = useState(false);
 
@@ -39,16 +39,22 @@ const Page = () => {
     }
 
     setErrors(validationErrors);
-    
-  
+
     if (Object.keys(validationErrors).length === 0) {
-      
-      emailjs.sendForm('service_ucyuin8','template_recchh7',form.current, 'vf_hPfCcRr4cRaUVy').then((res)=>{
-        console.log(res)
-        setConfirmMsg(true);
-      }).catch((err)=>{
-        console.log(err)
-      })
+      emailjs
+        .sendForm(
+          "service_ucyuin8",
+          "template_recchh7",
+          form.current,
+          "vf_hPfCcRr4cRaUVy"
+        )
+        .then((res) => {
+          console.log(res);
+          setConfirmMsg(true);
+        })
+        .catch((err) => {
+          console.log(err);
+        });
     }
   };
 
@@ -64,35 +70,41 @@ const Page = () => {
           ref={form}
           className='flex flex-col  gap-8'
           onSubmit={handleSubmit}>
-            <input
-              className='bg-transparent focus:bg-white border focus:outline-none rounded-md px-4 h-12'
-              type='text'
-              placeholder='Name'
-              onChange={handleChange}
-              name="username"
-              />
-              {errors.username && <span className="-mt-8 text-red-600 text-sm">{errors.username}</span>}
-          
-            <input
-              className='bg-transparent focus:bg-white border focus:outline-none rounded-md px-4 h-12'
-              type='email'
-              placeholder='Email'
-              onChange={handleChange}
-              name="email"
-            />
-            {errors.email && <span className="-mt-8 text-red-600 text-sm">{errors.email}</span>}
-        
-          
-            <textarea
-              className='bg-transparent focus:bg-white border focus:outline-none rounded-md p-4  h-48'
-              type='text'
-              placeholder='Message'
-              autoComplete='off'
-              name="message"
-              onChange={handleChange}
-            />
-            {errors.message && <span className="-mt-8 text-red-600 text-sm">{errors.message}</span>}
-         
+          <input
+            className='bg-transparent focus:bg-white border focus:outline-none rounded-md px-4 h-12'
+            type='text'
+            placeholder='Name'
+            onChange={handleChange}
+            name='username'
+          />
+          {errors.username && (
+            <span className='-mt-8 text-red-600 text-sm'>
+              {errors.username}
+            </span>
+          )}
+
+          <input
+            className='bg-transparent focus:bg-white border focus:outline-none rounded-md px-4 h-12'
+            type='email'
+            placeholder='Email'
+            onChange={handleChange}
+            name='email'
+          />
+          {errors.email && (
+            <span className='-mt-8 text-red-600 text-sm'>{errors.email}</span>
+          )}
+
+          <textarea
+            className='bg-transparent focus:bg-white border focus:outline-none rounded-md p-4  h-48'
+            type='text'
+            placeholder='Message'
+            autoComplete='off'
+            name='message'
+            onChange={handleChange}
+          />
+          {errors.message && (
+            <span className='-mt-8 text-red-600 text-sm'>{errors.message}</span>
+          )}
 
           <button
             type='submit'
@@ -100,13 +112,7 @@ const Page = () => {
             Send Message
           </button>
         </form>
-        {
-          !confirmMsg &&(
-            <div>
-
-            </div>
-          )
-        }
+        {!confirmMsg && <div></div>}
       </div>
       <BottomNav path={"/"} text={"Go Back Home."} />
     </div>

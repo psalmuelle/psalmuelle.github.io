@@ -9,7 +9,7 @@ export default function BottomNav({path,text}){
     const router = useRouter()
     return(
         <div
-        onClick={()=> router.push({path})}
+        onClick={()=> router.push(path)}
         className='mt-4 max-xl:mb-10 cursor-pointer flex gap-2 items-center '>
         <button className="btn">{text}</button>
         <BsArrowRight size={20} />

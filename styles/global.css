@@ -92,14 +92,21 @@ main:after {
     @apply rounded-t-lg bg-clip-padding backdrop-filter backdrop-blur-md bg-opacity-50 bg-[#d6d6d6];
   }
 }
-
+.logo{
+  @apply border-4 border-main px-2 rounded-full
+}
 .nav_link {
   @apply flex items-center hover:bg-[rgba(255,255,255,0.4)] hover:opacity-90 max-xl:hover:bg-transparent gap-4 rounded-lg justify-start text-main px-4 py-2.5 font-semibold;
+}
+.mobile_navbar{
+  @apply cursor-pointer rounded-lg bg-white/60
 }
 .mobile_nav {
   @apply max-xl:w-11/12 max-xl:mx-auto;
 }
-
+.nav-container{
+  @apply mobile_nav absolute top-4 xl:left-4 xl:min-h-[450px] xl:h-[95vh] max-xl:mx-auto max-xl:right-0 max-xl:left-0 glassmorphism z-10 text-main p-4 max-xl:p-2 
+}
 .text_link {
   @apply text-main font-bold hover:underline decoration-blue-900;
 }
@@ -109,6 +116,16 @@ main:after {
 .btn {
   @apply hover:underline decoration-blue-900;
 }
+.flex-center{
+  @apply flex justify-center items-center
+}
+.flex-between{
+  @apply flex items-center justify-between
+}
+.footer{
+  @apply max-xl:fixed bottom-0 flex-center max-xl:justify-between mobile_glassmorphism rounded-t-2xl w-full p-4 md:px-20 xl:gap-8 xl:mb-14
+}
+
 .backlay {
   margin: 0;
 }

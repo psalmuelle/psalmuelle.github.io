@@ -7,6 +7,7 @@ import { SiTypescript } from "react-icons/si";
 import { RiReactjsLine } from "react-icons/ri";
 import { TbBrandNextjs } from "react-icons/tb";
 import Link from "next/link";
+import { aboutIntro, experience, volunteer } from "@/components/AppData";
 import BottomNav from "@/components/BottomNav";
 
 const AboutPage = () => {
@@ -32,15 +33,16 @@ const AboutPage = () => {
       logo: <TbBrandNextjs />,
     },
   ];
+
   return (
-    <div className="max-w-5xl">
+    <div className='max-w-5xl'>
       <h1 className='title'>About Me.</h1>
       <div>
         <div className='mt-8'>
-          <div className='flex justify-between items-center max-sm:flex-col max-sm:justify-start max-sm:items-start my-3'>
+          <div className='flex-between max-sm:flex-col max-sm:justify-start max-sm:items-start my-3'>
             <Link
               href={"https://github.com/psalmuelle"}
-              className='flex justify-center items-center gap-2 hover:underline font-semibold'>
+              className='flex-center gap-2 hover:underline font-semibold'>
               Engineering{" "}
               <span>
                 <AiOutlineGithub />
@@ -52,20 +54,9 @@ const AboutPage = () => {
               View Github
             </Link>
           </div>
-
-          <p>
-            In the digital realm, the frontend of a web application wields
-            profound influence, acting as the virtual face that users encounter
-            first. Its visual appeal is not a mere adornment but a strategic
-            necessity, shaping user experiences and perceptions. An
-            aesthetically pleasing frontend crafts positive first impressions,
-            drawing users into seamless, intuitive navigation. Beyond
-            aesthetics, it builds trust and credibility, reflecting the brand's
-            identity and fostering emotional connections. Using my experience as
-            a frontend developer, I possess the ability to tackle technical
-            challenges while crafting web apps that are desirable and
-            indispensable.
-          </p>
+          {aboutIntro.map((val, i) => {
+            return <p key={i}>{val}</p>;
+          })}
         </div>
         <div className='my-8'>
           <h2 className='font-bold hover:underline cursor-pointer mb-4'>
@@ -75,9 +66,7 @@ const AboutPage = () => {
           <div className='flex gap-4 flex-wrap'>
             {skills.map((val) => {
               return (
-                <div
-                  key={val.id}
-                  className='flex justify-center items-center gap-2 '>
+                <div key={val.id} className='flex-center gap-2 '>
                   <span>{val.logo}</span>
                   <p>{val.skill}</p>
                 </div>
@@ -90,59 +79,27 @@ const AboutPage = () => {
           <h2 className='font-bold hover:underline cursor-pointer mb-4'>
             Work Experience
           </h2>
-          <div>
-            <div className='flex justify-between items-center max-sm:flex-col max-sm:justify-start max-sm:items-start my-3'>
-              <p className='hover:underline font-semibold cursor-pointer'>
-                Frontend Developer Intern
-              </p>
-              <div className='flex justify-center items-center gap-1 underline font-bold cursor-pointer'>
-                <AiOutlineCalendar />
-                <p>2022</p>
-              </div>
-            </div>
-            <div className='mb-4'>
-              Worked at <span className='font-bold italic'>HNG</span> as a
-              frontend developer with a team to create a web application that
-              uses AI to generate letters to loved ones.
-            </div>
-          </div>
-          <hr />
 
-          <div>
-            <div className='flex justify-between items-center max-sm:flex-col max-sm:justify-start max-sm:items-start my-3'>
-              <p className='hover:underline font-semibold cursor-pointer'>
-                Full-stack developer trainee
-              </p>
-              <div className='flex justify-center items-center gap-1 underline font-bold cursor-pointer'>
-                <AiOutlineCalendar />
-                <p>2022</p>
-              </div>
-            </div>
-            <div className='mb-4'>
-              Worked at <span className='font-bold italic'>Zuri Inc.</span> as a
-              developer trainee where I got to learn how to build websites using
-              different web frameworks and libraries.
-            </div>
-          </div>
-          <hr />
+          {experience.map((val) => {
+            return (
+              <>
+                <div
+                  key={val.id}
+                  className='flex justify-between items-center max-sm:flex-col max-sm:justify-start max-sm:items-start my-3'>
+                  <p className='hover:underline font-semibold cursor-pointer'>
+                    {val.title}
+                  </p>
+                  <div className='flex-center gap-1 underline font-bold cursor-pointer'>
+                    <AiOutlineCalendar />
+                    <p>{val.year}</p>
+                  </div>
+                </div>
+                <div className='mb-4'>{val.description}</div>
+                <hr className='mb-10' />
+              </>
+            );
+          })}
 
-          <div>
-            <div className='flex justify-between items-center max-sm:flex-col max-sm:justify-start max-sm:items-start my-3'>
-              <p className='hover:underline font-semibold cursor-pointer'>
-                Freelance web developer
-              </p>
-              <div className='flex justify-center items-center gap-1 underline font-bold cursor-pointer'>
-                <AiOutlineCalendar />
-                <p>2020-2022</p>
-              </div>
-            </div>
-            <div className='mb-4'>
-              Worked at <span className='font-bold italic'>Upwork</span> as a
-              freelance web developer with a speciality in WordPress. Helped
-              clients build websites for their businesses.
-            </div>
-            <hr className='mb-10' />
-          </div>
         </div>
 
         <div>
@@ -150,30 +107,29 @@ const AboutPage = () => {
             Volunteer Experience
           </h2>
           <div>
-            <div className='flex justify-between items-center max-sm:flex-col max-sm:justify-start max-sm:items-start my-3'>
+            <div className='flex-between max-sm:flex-col max-sm:justify-start max-sm:items-start my-3'>
               <p className='hover:underline font-semibold cursor-pointer'>
                 Frontend Developer
               </p>
-              <div className='flex justify-center items-center gap-1 underline font-bold cursor-pointer'>
+              <div className='flex-center gap-1 underline font-bold cursor-pointer'>
                 <AiOutlineCalendar />
                 <p>2022</p>
               </div>
             </div>
-            <div className='mb-4'>
-              <p className='font-semibold'>ChRIS Project</p>
-              <p>
-                ChRIS is an <i>open-source</i> project that allows medical radiologists
-                and physicians to scan images to identify tumours, detect
-                changes in the internal structure of the body and identify
-                defects. I contributed to the frontend part of the website using
-                Reactjs and Patternfly
-              </p>
-            </div>
+
+            {volunteer.map((val) => {
+              return (
+                <div className='mb-4' key={val.id}>
+                  <p className='font-semibold'>{val.title}</p>
+                  <p>{val.content}</p>
+                </div>
+              );
+            })}
             <hr className='mb-10' />
           </div>
         </div>
 
-        <BottomNav path={'/projects'} text={'Lets Continue To Projects.'}/>
+        <BottomNav path={"/projects"} text={"Lets Continue To Projects."} />
       </div>
     </div>
   );

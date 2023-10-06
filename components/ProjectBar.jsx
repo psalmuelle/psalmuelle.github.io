@@ -23,11 +23,11 @@ export default function ProjectBar({
   return (
     <div
       onClick={toggleBar}
-      className='fixed z-50 w-screen h-screen top-0 right-0 bg-[#545454]/20'>
+      className='fixed z-50 w-screen h-screen top-0 right-0 bg-secondary/20'>
       <div
         onClick={(e) => e.stopPropagation()}
         className='fixed top-0 right-0  h-screen o overflow-x-auto max-w-lg z-50 bg-white p-8 max-md:p-4 '>
-        <div className=' w-full flex justify-between items-center py-3 mb-6 border-b'>
+        <div className=' w-full flex-between py-3 mb-6 border-b'>
           <div onClick={toggleBar} className='rounded-full border-2 p-0.5 '>
             <MdChevronLeft size={24} color='gray' />
           </div>
@@ -82,7 +82,7 @@ export default function ProjectBar({
           </div>
           <a
             href={liveUrl}
-            className='fixed bottom-0 w-full max-w-lg right-0 text-white py-4 bg-main flex justify-center items-center gap-1 cursor-pointer'>
+            className='fixed bottom-0 w-full max-w-lg right-0 text-white py-4 bg-main flex-center gap-1 cursor-pointer'>
             <p className='font-semibold'>Open Project</p>
             <MdLaunch size={24} />
           </a>

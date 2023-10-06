@@ -16,8 +16,7 @@ const NavLink = ({ title, href, icon, activeLink, hideTitle, onClick }) => {
       className={`nav_link ${activeLink === href ? "active_btn" : ""} ${
         hideTitle ? "block w-fit h-[47px]" : ""
       }`}
-      onClick={onClick}
-      >
+      onClick={onClick}>
       {icon}
       {!hideTitle ? <p>{title}</p> : ""}
     </Link>
@@ -38,102 +37,89 @@ const Nav = ({ activeLink }) => {
   const pathName = usePathname();
 
   return (
-    <div className="w-fit h-fit xl:fixed">
-    <nav
-      className={`glassmorphism z-10 text-main p-4 max-xl:p-2 ${
-        hideNav ? "w-fit" : "w-60"
-      } mobile_nav absolute  top-4 xl:left-4 xl:min-h-[450px] xl:h-[95vh] max-xl:mx-auto max-xl:right-0 max-xl:left-0 `}>
-      <div>
-        {/* DeskTop Navigation Menu */}
-        <div
-          className={`flex justify-between items-center ${
-            hideNav ? "flex-col-reverse gap-6" : ""
-          } max-xl:hidden`}>
-          <div className='border-4 border-main px-2 py-[13px] rounded-full'>
-            <Image src={"/es1.png"} alt='Logo' width={28} height={28} />
-          </div>
+    <div className='w-fit h-fit xl:fixed'>
+      <nav className={`nav-container ${hideNav ? "w-fit" : "w-60"} `}>
+        <div>
+          {/* DeskTop Navigation Menu */}
           <div
-            onClick={HideNavTexts}
-            className='p-3 cursor-pointer rounded-lg bg-white/60'>
-            {hideNav ? <BiRightArrow /> : <BiLeftArrow />}
+            className={`flex-between ${
+              hideNav ? "flex-col-reverse gap-6" : ""
+            } max-xl:hidden`}>
+            <div className='logo py-[13px] '>
+              <Image src={"/es1.png"} alt='Logo' width={28} height={28} />
+            </div>
+            <div onClick={HideNavTexts} className='p-3 mobile_navbar'>
+              {hideNav ? <BiRightArrow /> : <BiLeftArrow />}
+            </div>
           </div>
-        </div>
 
-        {/* Mobile Navigation Menu */}
-        <div className={`flex justify-between items-center xl:hidden`}>
-          <div className='border-4 border-main px-2 py-3 rounded-full'>
-            <Image src={"/es1.png"} alt='Logo' width={24} height={24} />
+          {/* Mobile Navigation Menu */}
+          <div className={`flex-between xl:hidden`}>
+            <div className='logo py-3'>
+              <Image src={"/es1.png"} alt='Logo' width={24} height={24} />
+            </div>
+            <div onClick={HideMobileNav} className='p-2 mobile_navbar'>
+              {mobileNav ? <MdClose size={24} /> : <FiMenu size={24} />}
+            </div>
           </div>
+
           <div
-            onClick={HideMobileNav}
-            className='p-2 cursor-pointer rounded-lg bg-white/60'>
-            {mobileNav ? <MdClose size={24} /> : <FiMenu size={24} />}
+            className={` ${mobileNav ? "flex-center " : "max-xl:hidden"}  `}
+            onClick={() => setMobileNav(false)}>
+            <div className={`mt-10 flex justify-center flex-col gap-2`}>
+              {!(pathName === "/") && (
+                <NavLink
+                  title={"Home"}
+                  activeLink={activeLink}
+                  href={"/"}
+                  icon={<FiHome size={hideNav ? 20 : ""} />}
+                  hideTitle={hideNav}
+                />
+              )}
+
+              {!(pathName === "/about") && (
+                <NavLink
+                  title={"About"}
+                  href={"/about"}
+                  icon={<FiInfo size={hideNav ? 21 : 19} />}
+                  activeLink={activeLink}
+                  hideTitle={hideNav}
+                />
+              )}
+
+              {!(pathName === "/projects") && (
+                <NavLink
+                  title={"Projects"}
+                  activeLink={activeLink}
+                  href={"/projects"}
+                  icon={<GrProjects size={hideNav ? 20 : ""} />}
+                  hideTitle={hideNav}
+                />
+              )}
+
+              {!(pathName === "/blog") && (
+                <NavLink
+                  title={"Blog"}
+                  activeLink={activeLink}
+                  href={"/blog"}
+                  icon={<BsPencilSquare size={hideNav ? 20 : ""} />}
+                  hideTitle={hideNav}
+                />
+              )}
+
+              {!(pathName === "/contact") && (
+                <NavLink
+                  title={"Contact"}
+                  activeLink={activeLink}
+                  href={"/contact"}
+                  icon={<GrContact size={hideNav ? 20 : ""} />}
+                  hideTitle={hideNav}
+                />
+              )}
+            </div>
           </div>
         </div>
-
-        <div
-          className={` ${
-            mobileNav
-              ? "max-xl:flex items-center justify-center mt-"
-              : "max-xl:hidden"
-          }  `}
-          onClick={()=> setMobileNav(false)}
-          >
-          <div className={`mt-10 flex justify-center flex-col gap-2`}>
-            {!(pathName === "/") && (
-              <NavLink
-                title={"Home"}
-                activeLink={activeLink}
-                href={"/"}
-                icon={<FiHome size={hideNav ? 20 : ""} />}
-                hideTitle={hideNav}
-              />
-            )}
-
-            {!(pathName === "/about") && (
-              <NavLink
-                title={"About"}
-                href={"/about"}
-                icon={<FiInfo size={hideNav ? 21 : 19} />}
-                activeLink={activeLink}
-                hideTitle={hideNav}
-              />
-            )}
-
-            {!(pathName === "/projects") && (
-              <NavLink
-                title={"Projects"}
-                activeLink={activeLink}
-                href={"/projects"}
-                icon={<GrProjects size={hideNav ? 20 : ""} />}
-                hideTitle={hideNav}
-
-              />
-            )}
-
-            {!(pathName === "/blog") && (
-              <NavLink
-                title={"Blog"}
-                activeLink={activeLink}
-                href={"/blog"}
-                icon={<BsPencilSquare size={hideNav ? 20 : ""} />}
-                hideTitle={hideNav}
-              />
-            )}
-
-            {!(pathName === "/contact") && (
-              <NavLink
-                title={"Contact"}
-                activeLink={activeLink}
-                href={"/contact"}
-                icon={<GrContact size={hideNav ? 20 : ""} />}
-                hideTitle={hideNav}
-              />
-            )}
-          </div>
-        </div>
-      </div>
-    </nav>
+      </nav>
     </div>
   );
 };

@@ -42,8 +42,7 @@ const Page = () => {
           liveUrl={projects[id]?.websiteUrl}
         />
 
-       
-        <BottomNav path={'/about'} text={"Let's Go To My Resume."}/>
+        <BottomNav path={"/about"} text={"Let's Go To My Resume."} />
       </div>
     </ProjectBarProvider>
   );

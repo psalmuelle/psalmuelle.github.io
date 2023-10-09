@@ -5,7 +5,7 @@ import { BsMedium, BsWhatsapp } from "react-icons/bs";
 import { FiTwitter } from "react-icons/fi";
 
 const FooterLink = ({ href, icon }) => {
-  return <Link href={href}>{icon}</Link>;
+  return <Link className="hover:opacity-90" href={href}>{icon}</Link>;
 };
 
 const Footer = () => {

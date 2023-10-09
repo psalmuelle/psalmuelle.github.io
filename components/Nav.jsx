@@ -8,6 +8,7 @@ import { FiHome, FiInfo, FiMenu } from "react-icons/fi";
 import { GrProjects, GrContact } from "react-icons/gr";
 import { BsPencilSquare } from "react-icons/bs";
 import { MdClose } from "react-icons/md";
+import { motion, AnimatePresence } from "framer-motion";
 
 const NavLink = ({ title, href, icon, activeLink, hideTitle, onClick }) => {
   return (
@@ -54,7 +55,7 @@ const Nav = ({ activeLink }) => {
           </div>
 
           {/* Mobile Navigation Menu */}
-          <div className={`flex-between xl:hidden`}>
+          <div className={`flex-between xl:hidden transition ease-in-out delay-150`}>
             <div className='logo py-3'>
               <Image src={"/es1.png"} alt='Logo' width={24} height={24} />
             </div>
@@ -63,61 +64,71 @@ const Nav = ({ activeLink }) => {
             </div>
           </div>
 
-          <div
-            className={` ${mobileNav ? "flex-center " : "max-xl:hidden"}  `}
-            onClick={() => setMobileNav(false)}>
-            <div className={`mt-10 flex justify-center flex-col gap-2`}>
-              {!(pathName === "/") && (
-                <NavLink
-                  title={"Home"}
-                  activeLink={activeLink}
-                  href={"/"}
-                  icon={<FiHome size={hideNav ? 20 : ""} />}
-                  hideTitle={hideNav}
-                />
-              )}
+          <AnimatePresence mode="popLayout">
+            <div
+              className={` ${mobileNav ? "flex-center " : "max-xl:hidden"}  `}
+              onClick={() => setMobileNav(false)}>
+              <div className={`mt-10 flex justify-center flex-col gap-2`}>
+                <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }}>
+                  {!(pathName === "/") && (
+                    <NavLink
+                      title={"Home"}
+                      activeLink={activeLink}
+                      href={"/"}
+                      icon={<FiHome size={hideNav ? 20 : ""} />}
+                      hideTitle={hideNav}
+                    />
+                  )}
+                </motion.div>
+                <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }}>
+                  {!(pathName === "/about") && (
+                    <NavLink
+                      title={"About"}
+                      href={"/about"}
+                      icon={<FiInfo size={hideNav ? 21 : 19} />}
+                      activeLink={activeLink}
+                      hideTitle={hideNav}
+                    />
+                  )}
+                </motion.div>
+                <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }}>
+                  {!(pathName === "/projects") && (
+                    <NavLink
+                      title={"Projects"}
+                      activeLink={activeLink}
+                      href={"/projects"}
+                      icon={<GrProjects size={hideNav ? 20 : ""} />}
+                      hideTitle={hideNav}
+                    />
+                  )}
+                </motion.div>
 
-              {!(pathName === "/about") && (
-                <NavLink
-                  title={"About"}
-                  href={"/about"}
-                  icon={<FiInfo size={hideNav ? 21 : 19} />}
-                  activeLink={activeLink}
-                  hideTitle={hideNav}
-                />
-              )}
+                <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }}>
+                  {!(pathName === "/blog") && (
+                    <NavLink
+                      title={"Blog"}
+                      activeLink={activeLink}
+                      href={"/blog"}
+                      icon={<BsPencilSquare size={hideNav ? 20 : ""} />}
+                      hideTitle={hideNav}
+                    />
+                  )}
+                </motion.div>
 
-              {!(pathName === "/projects") && (
-                <NavLink
-                  title={"Projects"}
-                  activeLink={activeLink}
-                  href={"/projects"}
-                  icon={<GrProjects size={hideNav ? 20 : ""} />}
-                  hideTitle={hideNav}
-                />
-              )}
-
-              {!(pathName === "/blog") && (
-                <NavLink
-                  title={"Blog"}
-                  activeLink={activeLink}
-                  href={"/blog"}
-                  icon={<BsPencilSquare size={hideNav ? 20 : ""} />}
-                  hideTitle={hideNav}
-                />
-              )}
-
-              {!(pathName === "/contact") && (
-                <NavLink
-                  title={"Contact"}
-                  activeLink={activeLink}
-                  href={"/contact"}
-                  icon={<GrContact size={hideNav ? 20 : ""} />}
-                  hideTitle={hideNav}
-                />
-              )}
+                <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }}>
+                  {!(pathName === "/contact") && (
+                    <NavLink
+                      title={"Contact"}
+                      activeLink={activeLink}
+                      href={"/contact"}
+                      icon={<GrContact size={hideNav ? 20 : ""} />}
+                      hideTitle={hideNav}
+                    />
+                  )}
+                </motion.div>
+              </div>
             </div>
-          </div>
+          </AnimatePresence>
         </div>
       </nav>
     </div>

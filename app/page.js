@@ -31,7 +31,7 @@ export default function Home() {
         </p>
       </div>
 
-      <BottomNav path={"/about"} text={"Know More Aboute Me."} />
+      <BottomNav path={"/about"} text={"See More About Me."} />
     </div>
   );
 }

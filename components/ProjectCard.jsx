@@ -2,7 +2,6 @@
 
 import React from "react";
 import { UpdateProjectBar } from "./ProjectBarContext";
-import Image from "next/image";
 
 const ProjectCard = ({
   id,
@@ -22,11 +21,11 @@ const ProjectCard = ({
   return (
     <div
       onClick={handleClick}
-      className={`relative max-w-sm w-full rounded-lg h-96 mx-4 max-sm:mx-0 my-5 `}>
-      <div className='w-full h-full bg-[url(/love-me.jpg)] bg-contain rounded-xl'>
-        {/* <Image src={'/love-me.app.png'} alt="article" width={1000} height={288} className=" w-full h-auto"/> */}
-      </div>
-      <div className='absolute top-0 right-0  w-full h-full bg-gradient-to-t from-secondary/90 to-white/50 rounded-lg flex justify-center items-end px-4'>
+      className={`relative max-w-sm w-full rounded-lg h-96 mx-4 cursor-pointer max-sm:mx-0 my-5 `}>
+      <div
+        style={{ backgroundImage: `url(${imageUrl})` }}
+        className='w-full h-full bg-cover bg-center rounded-xl'></div>
+      <div className='absolute top-0 right-0  w-full h-full bg-gradient-to-t from-secondary/90 to-white/50 rounded-lg flex justify-center items-end px-4  lg:opacity-0 lg:hover:opacity-100 transition-opacity ease-out duration-500'>
         <div className='text-white py-8'>
           <h2 className='font-bold text-4xl'>{projectName}</h2>
           <p className='my-4'>{title}</p>

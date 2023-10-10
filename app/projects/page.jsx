@@ -13,7 +13,7 @@ const Page = () => {
 
   return (
     <ProjectBarProvider>
-      <div className='' beforeun>
+      <div>
         <h1 className='title'>Projects.</h1>
         <div className='max-w-4xl mt-14 flex flex-wrap justify-center items-center gap-1'>
           {projects.map((val) => {

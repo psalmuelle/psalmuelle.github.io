@@ -96,9 +96,9 @@ const AboutPage = () => {
                   </div>
                 </div>
                 <ul className='mb-4'>
-                 {val.description.map((val)=>{
+                 {val.description.map((val,i)=>{
                   return(
-                  <li className="flex justify-start items-start gap-2 my-2">
+                  <li className="flex justify-start items-start gap-2 my-2" key={i}>
                     <div className="bg-green-00 py-1">
                   <BsRocketTakeoff size={20} />
                  </div>

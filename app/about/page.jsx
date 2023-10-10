@@ -9,6 +9,7 @@ import { TbBrandNextjs } from "react-icons/tb";
 import Link from "next/link";
 import { aboutIntro, experience, volunteer } from "@/components/AppData";
 import BottomNav from "@/components/BottomNav";
+import { BsRocketTakeoff } from "react-icons/bs";
 
 const AboutPage = () => {
   const skills = [
@@ -94,7 +95,18 @@ const AboutPage = () => {
                     <p>{val.year}</p>
                   </div>
                 </div>
-                <div className='mb-4'>{val.description}</div>
+                <ul className='mb-4'>
+                 {val.description.map((val)=>{
+                  return(
+                  <li className="flex justify-start items-start gap-2 my-2">
+                    <div className="bg-green-00 py-1">
+                  <BsRocketTakeoff size={20} />
+                 </div>
+                    <p className=" ">{val}</p>
+                  </li>
+                  )
+                 })}
+                </ul>
                 <hr className='mb-10' />
               </>
             );

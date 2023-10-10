@@ -42,7 +42,7 @@ const Page = () => {
           liveUrl={projects[id]?.websiteUrl}
         />
 
-        <BottomNav path={"/about"} text={"Let's Go To My Resume."} />
+        <BottomNav path={"https://drive.google.com/file/d/1-qS_U-eIT2ucAWadMp7wYU6YW3S4Bb-S/view?usp=sharing"} text={"Let's Go To My Resume."} />
       </div>
     </ProjectBarProvider>
   );

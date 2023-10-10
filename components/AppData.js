@@ -59,16 +59,37 @@ export const experience = [
   {
     id: "1",
     title: "Frontend Developer Intern(HNG)",
-    year: "2022",
-    description: ` Worked at HNG as a frontend developer with a team to create a web application that uses AI to generate letters to loved ones.`,
+    year: "2023",
+    description: [
+      `Collaborated as a front-end developer within a team, contributing to the creation of a web application. This platform harnessed the power of AI to generate heartfelt letters, fostering connections among loved ones.`,
+      `
+      Developed and implemented user-responsive prototypes using Reactjs, which enabled the platform to scale rapidly. The result manifests a design that enabled the platform to process over 1 million letters to customers.
+      `,
+      `
+      Enabled the platform to adapt to user needs through troubleshooting and debugging of browser conflicts, resulting in a 70% increase in website performance.
+      `,
+      `
+      Built and maintained automated test suites to ensure quality assurance throughout the development process.
+      `,
+    ],
   },
   {
     id: "2",
     title: "Web Developer(Freelance, Upwork)",
-    year: "2020-2021",
-    description: `Worked at Upwork as a
-    freelance web developer with a speciality in WordPress. Helped
-    clients build websites for their businesses.`,
+    year: "2020-2022",
+    description: [
+      ` Played a role in assisting clients in building professional websites tailored to their business needs, ensuring their online presence.`,
+      `
+      Developed custom WordPress plugins and themes, and enhanced client security by transferring websites to SSL protocol from HTTP.
+      `,
+      `
+      Increased overall website performance, including page loading speed, resulting in improved website ranking on Google and other search
+      engines.
+      `,
+      `
+      Achieved an average 5-star rating through 7+ projects with an impressive client retention rate of 92%.
+      `,
+    ],
   },
 ];
 
@@ -76,11 +97,8 @@ export const volunteer = [
   {
     id: "1",
     title: "ChRIS Project",
-    content: `ChRIS is an open-source project that allows medical
-        radiologists and physicians to scan images to identify tumours,
-        detect changes in the internal structure of the body and
-        identify defects. I contributed to the frontend part of the
-        website using Reactjs and Patternfly`,
+    content: `ChRIS is an open-source platform for computational research and medicine. I contributed to the frontend part of the
+    website using Reactjs and Patternfly`,
   },
   {
     id: "2",

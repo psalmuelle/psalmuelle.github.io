@@ -7,7 +7,7 @@ export const projects = [
     description: "",
     techStack: ["Javascript", "Reactjs", "FastAPI"],
     websiteUrl: "https://love-me.app",
-    githubUrl: "https://github.com/love-me.app",
+    githubUrl: "",
   },
   {
     id: 2,
@@ -19,18 +19,9 @@ export const projects = [
     websiteUrl: "https://erinlesam.tech",
     githubUrl: "https://github.com/psalmuelle/psalmuelle.github.io",
   },
+  
   {
     id: 3,
-    image: "Noir.png",
-    projectName: "Noir Landing Page",
-    title: "A Simple Landing Page",
-    description: "",
-    techStack: ["Javascript", "Reactjs"],
-    websiteUrl: "#",
-    githubUrl: "https://github.com/psalmuelle/",
-  },
-  {
-    id: 4,
     image: "slickio.png",
     projectName: "Slickio",
     title: "A simple todo app",
@@ -106,3 +97,20 @@ export const volunteer = [
     content: `ZubHub is an open-source project built for awesome kids to showcase their creative projects and DIYs. I contributed to the frontend part of the web application using Reactjs.`,
   },
 ];
+
+export const blogs = [
+  {
+    id:'1',
+    title: 'Animate Your Reactjs App Using Framer Motion - Complete Guide',
+    description: 'Framer motion is a powerful animation library and quiet easy to understand...', 
+    image: 'blog-framer-motion.png',
+    link: 'https://medium.com/@erinle-sam/animate-your-reactjs-app-using-framer-motion-complete-guide-f9873fa209ba',
+  },
+  {
+    id:'2',
+    title: 'Mastering Git: Crafting Impactful Commit Messages for Efficient Collaboration',
+    description: 'When I started writing codes and was pushing to github as a beginner, I...', 
+    image: 'blog-git-commit.png',
+    link: 'https://medium.com/@erinle-sam/mastering-git-crafting-impactful-commit-messages-for-efficient-collaboration-440303718fe',
+  },
+]

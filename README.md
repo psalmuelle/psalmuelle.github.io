@@ -1,4 +1,4 @@
-This is my portfolio
+Testing my directus application with this
 
 ## Getting Started
 

@@ -1,4 +1,4 @@
-Testing my directus application with this
+I edited this again and its working on the directus page
 
 ## Getting Started
 
